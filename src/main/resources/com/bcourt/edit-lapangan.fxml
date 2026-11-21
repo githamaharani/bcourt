@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox fx:id="mainLayout" prefHeight="720.0" prefWidth="1280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox fx:id="sidebar1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.00" prefWidth="240.01" style="-fx-background-color: #FFFCFA; -fx-border-color: transparent #EADBD2 transparent transparent;">
+               <padding>
+                  <Insets bottom="10.62" left="10.21" right="10.21" top="15.94" />
+               </padding>
+               <children>
+                  <HBox fx:id="brandContainer1" alignment="CENTER_LEFT" spacing="9.50">
+                     <children>
+                        <ImageView fx:id="logoImageView1" fitHeight="75.23" fitWidth="198.22" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Screenshot%202026-11-21%20144307%201.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <VBox fx:id="navigationMenu1" spacing="4.75">
+                     <VBox.margin>
+                        <Insets top="18.59" />
+                     </VBox.margin>
+                     <children>
+                        <HBox fx:id="lapanganMenu1" alignment="CENTER_LEFT" prefHeight="37.97" prefWidth="215.11" spacing="11.08" style="-fx-background-color: transparent; -fx-padding: 0.00 11.89 0.00 11.89;">
+                           <children>
+                              <ImageView fx:id="lapanganIcon1" fitHeight="16.88" fitWidth="21.33" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Dashboard%20icon.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="lapanganLabel1" style="-fx-font-size: 11.87px; -fx-text-fill: #58321B;" text="Dashboard" />
+                           </children>
+                        </HBox>
+                        <HBox fx:id="dashboardMenu11" alignment="CENTER_LEFT" prefHeight="37.97" prefWidth="215.11" spacing="11.08" style="-fx-background-color: #913601; -fx-background-radius: 8.36; -fx-padding: 0.00 11.89 0.00 11.89;">
+                           <children>
+                              <ImageView fx:id="dashboardIcon11" fitHeight="16.88" fitWidth="21.33" pickOnBounds="true" preserveRatio="true">
+                                 <effect>
+                                    <ColorAdjust brightness="1.0" />
+                                 </effect>
+                                 <image>
+                                    <Image url="@../Manajemen%20Lapangan%20icon.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="dashboardLabel11" style="-fx-font-size: 11.87px; -fx-font-weight: bold; -fx-text-fill: #FFFFFF;" text="Manajemen Lapangan" />
+                           </children>
+                        </HBox>
+                        <HBox fx:id="peralatanMenu1" alignment="CENTER_LEFT" prefHeight="37.97" prefWidth="215.11" spacing="11.08" style="-fx-background-color: transparent; -fx-padding: 0.00 11.89 0.00 11.89;">
+                           <children>
+                              <ImageView fx:id="peralatanIcon1" fitHeight="16.88" fitWidth="21.33" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Manajemen%20Peralatan%20icon.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="peralatanLabel1" style="-fx-font-size: 11.87px; -fx-text-fill: #58321B;" text="Manajemen Peralatan" />
+                           </children>
+                        </HBox>
+                        <HBox fx:id="transaksiMenu1" alignment="CENTER_LEFT" prefHeight="37.97" prefWidth="215.11" spacing="11.08" style="-fx-background-color: transparent; -fx-padding: 0.00 11.89 0.00 11.89;">
+                           <children>
+                              <ImageView fx:id="transaksiIcon1" fitHeight="16.88" fitWidth="21.33" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Data%20Transaksi%20icon.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="transaksiLabel1" style="-fx-font-size: 11.87px; -fx-text-fill: #58321B;" text="Data Transaksi" />
+                           </children>
+                        </HBox>
+                        <HBox fx:id="laporanMenu1" alignment="CENTER_LEFT" prefHeight="37.97" prefWidth="215.11" spacing="11.08" style="-fx-background-color: transparent; -fx-padding: 0.00 11.89 0.00 11.89;">
+                           <children>
+                              <ImageView fx:id="laporanIcon1" fitHeight="16.88" fitWidth="21.33" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Laporan%20icon.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="laporanLabel1" style="-fx-font-size: 11.87px; -fx-text-fill: #58321B;" text="Laporan" />
+                           </children>
+                        </HBox>
+                        <HBox fx:id="penggunaMenu1" alignment="CENTER_LEFT" prefHeight="37.97" prefWidth="215.11" spacing="11.08" style="-fx-background-color: transparent; -fx-padding: 0.00 11.89 0.00 11.89;">
+                           <children>
+                              <ImageView fx:id="penggunaIcon1" fitHeight="16.88" fitWidth="21.33" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Manajemen%20Pengguna%20icon.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="penggunaLabel1" style="-fx-font-size: 11.87px; -fx-text-fill: #58321B;" text="Manajemen Pengguna" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <Region fx:id="sidebarSpacer1" VBox.vgrow="ALWAYS" />
+                  <Separator prefWidth="215.11" />
+                  <HBox fx:id="profileMenu1" alignment="CENTER_LEFT" prefHeight="43.59" prefWidth="215.11" spacing="11.08" style="-fx-padding: 0.00 11.89 0.00 11.89;">
+                     <children>
+                        <ImageView fx:id="profileIcon1" fitHeight="16.88" fitWidth="21.33" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Profile%20icon.png" />
+                           </image>
+                        </ImageView>
+                        <Label style="-fx-font-size: 11.87px; -fx-text-fill: #58321B;" text="Profil Saya" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+
+            <!-- ======================= KONTEN UTAMA ======================= -->
+            <VBox fx:id="mainContent" prefHeight="720.0" prefWidth="995.56" spacing="11.07" style="-fx-background-color: #F8EFEA;" HBox.hgrow="ALWAYS">
+               <padding>
+                  <Insets bottom="15.81" left="15.81" right="15.81" top="15.81" />
+               </padding>
+               <children>
+
+                  <!-- Header -->
+                  <HBox fx:id="topHeader" alignment="TOP_LEFT">
+                     <children>
+                        <VBox fx:id="pageInformation" spacing="3.16">
+                           <children>
+                              <HBox fx:id="breadcrumbContainer" alignment="CENTER_LEFT" spacing="6.32">
+                                 <children>
+                                    <Hyperlink fx:id="dashboardBreadcrumb" mnemonicParsing="false" style="-fx-font-size: 11.86px;-fx-text-fill: #805B47;-fx-border-color: transparent;-fx-padding: 0.0;" text="Dashboard" underline="false" />
+                                    <Label fx:id="separator1" style="-fx-font-size: 11.86px;-fx-text-fill: #805B47;" text="&gt;" />
+                                    <Hyperlink fx:id="courtBreadcrumb" mnemonicParsing="false" style="-fx-font-size: 11.86px;-fx-text-fill: #805B47;-fx-border-color: transparent;-fx-padding: 0.0;" text="Manajemen Lapangan" underline="false" />
+                                    <Label fx:id="separator2" style="-fx-font-size: 11.86px;-fx-text-fill: #805B47;" text="&gt;" />
+                                    <Label fx:id="currentBreadcrumb" style="-fx-font-size: 11.86px;-fx-text-fill: #58321B;" text="Edit Lapangan" />
+                                 </children>
+                              </HBox>
+                              <Label fx:id="pageTitle" style="-fx-font-size: 26.88px;-fx-font-weight: bold;-fx-text-fill: #58321B;" text="Edit Lapangan" />
+                              <Label fx:id="pageDescription" style="-fx-font-size: 12.65px;-fx-text-fill: #805B47;" text="Perbarui informasi dan detail lapangan badminton." />
+                           </children>
+                        </VBox>
+                        <Region fx:id="headerSpacer" HBox.hgrow="ALWAYS" />
+                        <HBox fx:id="headerActions" alignment="CENTER_LEFT" spacing="11.07">
+                           <children>
+                              <ImageView fx:id="notificationIcon" fitHeight="19.69" fitWidth="24.89" pickOnBounds="true" preserveRatio="true" />
+                              <Separator orientation="VERTICAL" prefHeight="25.31" />
+                              <ImageView fx:id="adminProfileImageView" fitHeight="33.75" fitWidth="42.67" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Profile%20icon.png" />
+                                 </image></ImageView>
+                              <VBox fx:id="adminInformation" alignment="CENTER_LEFT" spacing="0.79">
+                                 <children>
+                                    <Label fx:id="adminNameLabel" style="-fx-font-size: 11.86px;-fx-font-weight: bold;-fx-text-fill: #58321B;" text="Admin" />
+                                    <Label fx:id="adminRoleLabel" style="-fx-font-size: 9.49px;-fx-text-fill: #9B7967;" text="Administrator" />
+                                 </children>
+                              </VBox>
+                              <ImageView fx:id="dropdownIcon" fitHeight="11.25" fitWidth="14.22" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+
+                  <!-- Konten edit: 2 kolom -->
+                  <HBox fx:id="editContent" alignment="TOP_LEFT" spacing="12.65">
+                     <children>
+
+                        <!-- Kolom kiri: form -->
+                        <VBox fx:id="leftColumn" prefWidth="604.44">
+                           <children>
+                              <VBox fx:id="editFormCard" prefWidth="604.44" spacing="12.65" style="-fx-background-color: #FFFFFF;-fx-background-radius: 15.81;-fx-padding: 18.97;" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <Label fx:id="formTitle" style="-fx-font-size: 18.18px;-fx-font-weight: bold;-fx-text-fill: #58321B;" text="Form Edit Lapangan" />
+                                    <Separator fx:id="formTitleSeparator" />
+                                    <GridPane fx:id="formFields" hgap="12.65" vgap="11.07">
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="8.89" percentWidth="50.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="8.89" percentWidth="50.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints vgrow="NEVER" />
+                                          <RowConstraints vgrow="NEVER" />
+                                          <RowConstraints vgrow="NEVER" />
+                                          <RowConstraints vgrow="NEVER" />
+                                          <RowConstraints vgrow="NEVER" />
+                                       </rowConstraints>
+                                       <children>
+                                 <VBox fx:id="courtNameCell" spacing="4.74" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                                    <children>
+                                       <Label fx:id="courtNameLabel" style="-fx-font-size: 11.07px;-fx-font-weight: bold;-fx-text-fill: #58321B;" text="Nama Lapangan *" />
+                                       <TextField fx:id="courtNameField" prefHeight="29.53" style="-fx-background-color: #FFFCFA;-fx-background-radius: 9.49;-fx-border-color: #EADBD2;-fx-border-radius: 9.49;-fx-font-size: 11.07px;-fx-text-fill: #58321B;-fx-prompt-text-fill: #B9A59B;-fx-padding: 0.0 9.49 0.0 9.49;" text="Lapangan 2" />
+                                    </children>
+                                 </VBox>
+                                 <VBox fx:id="courtNumberCell" spacing="4.74" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                                    <children>
+                                       <Label fx:id="courtNumberLabel" style="-fx-font-size: 11.07px;-fx-font-weight: bold;-fx-text-fill: #58321B;" text="Nomor Lapangan *" />
+                                       <TextField fx:id="courtNumberField" prefHeight="29.53" style="-fx-background-color: #FFFCFA;-fx-background-radius: 9.49;-fx-border-color: #EADBD2;-fx-border-radius: 9.49;-fx-font-size: 11.07px;-fx-text-fill: #58321B;-fx-prompt-text-fill: #B9A59B;-fx-padding: 0.0 9.49 0.0 9.49;" text="2" />
+                                    </children>
+                                 </VBox>
+                                 <VBox fx:id="courtTypeCell" spacing="4.74" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                                    <children>
+                                       <Label fx:id="courtTypeLabel" style="-fx-font-size: 11.07px;-fx-font-weight: bold;-fx-text-fill: #58321B;" text="Jenis Lapangan *" />
+                                       <HBox fx:id="courtTypeContainer" alignment="CENTER_LEFT" prefHeight="29.53" spacing="7.91">
+                                          <children>
+                                             <RadioButton fx:id="singleCourtRadio" mnemonicParsing="false" prefHeight="29.53" prefWidth="132.44" style="-fx-background-color: #FFFFFF;-fx-background-radius: 9.49;-fx-border-color: #EBE0DA;-fx-border-radius: 9.49;-fx-accent: #FF7721;-fx-font-size: 11.07px;-fx-text-fill: #58321B;-fx-padding: 0.0 11.07 0.0 11.07;" text="Tunggal">
+                                                <toggleGroup>
+                                                   <ToggleGroup fx:id="courtTypeGroup" />
+                                                </toggleGroup>
+                                             </RadioButton>
+                                             <RadioButton fx:id="doubleCourtRadio" mnemonicParsing="false" prefHeight="29.53" prefWidth="132.44" selected="true" style="-fx-background-color: #FFF0E5;-fx-background-radius: 9.49;-fx-border-color: #FF7721;-fx-border-radius: 9.49;-fx-border-width: 1.19;-fx-accent: #FF7721;-fx-font-size: 11.07px;-fx-text-fill: #58321B;-fx-padding: 0.0 11.07 0.0 11.07;" text="Ganda">
+                                                <toggleGroup>
+                                                   <fx:reference source="courtTypeGroup" />
+                                                </toggleGroup>
+                                             </RadioButton>
+                                          </children>
+                                       </HBox>
+                                    </children>
+                                 </VBox>
+                                 <VBox fx:id="courtPriceCell" spacing="4.74" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                    <children>
+                                       <Label fx:id="courtPriceLabel" style="-fx-font-size: 11.07px;-fx-font-weight: bold;-fx-text-fill: #58321B;" text="Harga Sewa per Jam *" />
+                                       <TextField fx:id="courtPriceField" prefHeight="29.53" style="-fx-background-color: #FFFCFA;-fx-background-radius: 9.49;-fx-border-color: #EADBD2;-fx-border-radius: 9.49;-fx-font-size: 11.07px;-fx-text-fill: #58321B;-fx-prompt-text-fill: #B9A59B;-fx-padding: 0.0 9.49 0.0 9.49;" text="Rp 60.000" />
+                                    </children>
+                                 </VBox>
+                                 <VBox fx:id="courtStatusCell" spacing="4.74" GridPane.columnIndex="0" GridPane.rowIndex="2">
+                                    <children>
+                                       <Label fx:id="courtStatusLabel" style="-fx-font-size: 11.07px;-fx-font-weight: bold;-fx-text-fill: #58321B;" text="Status Ketersediaan *" />
+                                       <ComboBox fx:id="courtStatusComboBox" maxWidth="159794945321094718524911545901960474618436543151647963268752976961375667901429576469346875068214637347158377444036667249639136489498994584836204550438735233214423263374537693401075585907647867297302319538832412489529869852003287102087327302068163037972846576358994434443762230406616924103564274521363611385856.0" prefHeight="29.53" prefWidth="273.78" promptText="Pilih status" style="-fx-background-color: #FFFFFF;-fx-background-radius: 9.49;-fx-border-color: #EADBD2;-fx-border-radius: 9.49;-fx-font-size: 11.07px;-fx-padding: 0.0 3.16 0.0 3.16;">
+                                          <items>
+                                             <FXCollections fx:factory="observableArrayList">
+                                                <String fx:value="Tersedia" />
+                                                <String fx:value="Perawatan" />
+                                             </FXCollections>
+                                          </items>
+                                          <value>
+                                             <String fx:value="Tersedia" />
+                                          </value>
+                                       </ComboBox>
+                                    </children>
+                                 </VBox>
+                                 <VBox fx:id="facilitiesCell" spacing="4.74" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="3">
+                                    <children>
+                                       <Label fx:id="facilitiesLabel" style="-fx-font-size: 11.07px;-fx-font-weight: bold;-fx-text-fill: #58321B;" text="Fasilitas" />
+                                       <GridPane fx:id="facilitiesSelection" hgap="7.91" style="-fx-background-color: #FFF8F4;-fx-background-radius: 6.32;-fx-border-color: #EADBD2;-fx-border-radius: 6.32;-fx-padding: 9.49 11.07 9.49 11.07;" vgap="6.32">
+                                          <columnConstraints>
+                                             <ColumnConstraints hgrow="SOMETIMES" minWidth="8.89" percentWidth="34.0" />
+                                             <ColumnConstraints hgrow="SOMETIMES" minWidth="8.89" percentWidth="36.0" />
+                                             <ColumnConstraints hgrow="SOMETIMES" minWidth="8.89" percentWidth="30.0" />
+                                          </columnConstraints>
+                                          <rowConstraints>
+                                             <RowConstraints minHeight="16.88" vgrow="NEVER" />
+                                             <RowConstraints minHeight="16.88" vgrow="NEVER" />
+                                          </rowConstraints>
+                                          <children>
+                                             <CheckBox fx:id="ledCheckBox" mnemonicParsing="false" selected="true" style="-fx-font-size: 10.28px;-fx-text-fill: #58321B;" text="Penerangan (LED)" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                                             <CheckBox fx:id="floorCheckBox" mnemonicParsing="false" selected="true" style="-fx-font-size: 10.28px;-fx-text-fill: #58321B;" text="Karpet/Lantai Standar" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                                             <CheckBox fx:id="acCheckBox" mnemonicParsing="false" style="-fx-font-size: 10.28px;-fx-text-fill: #58321B;" text="AC" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+                                             <CheckBox fx:id="scoreboardCheckBox" mnemonicParsing="false" style="-fx-font-size: 10.28px;-fx-text-fill: #58321B;" text="Papan Skor" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                                             <CheckBox fx:id="seatCheckBox" mnemonicParsing="false" selected="true" style="-fx-font-size: 10.28px;-fx-text-fill: #58321B;" text="Tempat Duduk" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                          </children>
+                                       </GridPane>
+                                    </children>
+                                 </VBox>
+                                 <VBox fx:id="courtDescriptionCell" spacing="4.74" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="4">
+                                    <children>
+                                       <Label fx:id="courtDescriptionLabel" style="-fx-font-size: 11.07px;-fx-font-weight: bold;-fx-text-fill: #58321B;" text="Deskripsi" />
+                                       <TextArea fx:id="courtDescriptionField" prefHeight="45.7" style="-fx-control-inner-background: #FFFCFA;-fx-background-color: #EADBD2, #FFFCFA;-fx-background-insets: 0.0, 0.79;-fx-background-radius: 9.49, 8.7;-fx-font-size: 11.07px;-fx-text-fill: #58321B;-fx-padding: 4.74;" text="Lapangan ganda dengan kondisi baik, penerangan LED, dan area bermain yang nyaman untuk latihan maupun pertandingan." wrapText="true" />
+                                    </children>
+                                 </VBox>
+                                       </children>
+                                    </GridPane>
+
+                                    <VBox fx:id="photoSection" spacing="6.32">
+                                       <children>
+                                          <Label fx:id="photoSectionTitle" style="-fx-font-size: 11.86px;-fx-font-weight: bold;-fx-text-fill: #58321B;" text="Foto Lapangan" />
+                                          <HBox fx:id="photoContainer" alignment="CENTER_LEFT" spacing="12.65">
+                                             <children>
+                                                <StackPane fx:id="currentPhotoContainer" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="77.34" prefWidth="155.56" style="-fx-background-color: #F1E4DC;-fx-background-radius: 9.49;">
+                                                   <children>
+                                                      <ImageView fx:id="currentCourtImage" fitHeight="77.34" fitWidth="155.56" pickOnBounds="true" preserveRatio="false" smooth="true">
+                                                         <clip>
+                                                            <Rectangle arcHeight="18.97" arcWidth="18.97" height="77.34" width="155.56" />
+                                                         </clip>
+                                                         <image>
+                                                            <Image url="@../../618e70119b754.jpeg" />
+                                                         </image>
+                                                      </ImageView>
+                                                      <Button fx:id="removePhotoButton" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="18.28" prefWidth="23.11" style="-fx-background-color: #FFFFFF;-fx-background-radius: 10.28;-fx-text-fill: #58321B;-fx-font-size: 11.86px;-fx-font-weight: bold;-fx-padding: 0.0;" text="×" StackPane.alignment="TOP_RIGHT">
+                                                         <StackPane.margin>
+                                                            <Insets right="4.74" top="4.74" />
+                                                         </StackPane.margin>
+                                                      </Button>
+                                                   </children>
+                                                </StackPane>
+                                                <VBox fx:id="replacePhotoContainer" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="77.34" prefWidth="155.56" spacing="4.74" style="-fx-background-color: #FFFCFA;-fx-background-radius: 9.49;-fx-border-color: #B9A59B;-fx-border-radius: 9.49;-fx-border-style: dashed;-fx-padding: 6.32;">
+                                                   <children>
+                                                      <Label fx:id="replacePhotoTitle" style="-fx-font-size: 11.07px;-fx-font-weight: bold;-fx-text-fill: #58321B;" text="Ganti Foto" />
+                                                      <Label fx:id="replacePhotoDescription" maxWidth="133.33" style="-fx-font-size: 8.7px;-fx-text-fill: #805B47;" text="(PNG, JPG, maksimal 5 MB)" textAlignment="CENTER" wrapText="true" />
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+
+                                    <HBox fx:id="formActions" alignment="CENTER_LEFT" spacing="12.65">
+                                       <children>
+                                          <Button fx:id="cancelButton" mnemonicParsing="false" prefHeight="33.75" prefWidth="231.11" style="-fx-background-color: #FFFFFF;-fx-background-radius: 18.97;-fx-border-color: #D99A72;-fx-border-radius: 18.97;-fx-border-width: 1.19;-fx-text-fill: #913601;-fx-font-size: 12.65px;-fx-font-weight: bold;" text="Batal" />
+                                          <Button fx:id="saveChangesButton" mnemonicParsing="false" prefHeight="33.75" prefWidth="316.44" style="-fx-background-color: #EF5C00;-fx-background-radius: 18.97;-fx-text-fill: #FFFFFF;-fx-font-size: 12.65px;-fx-font-weight: bold;" text="Simpan Perubahan" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+
+                        <!-- Kolom kanan: preview -->
+                        <VBox fx:id="rightColumn" prefWidth="341.33" HBox.hgrow="ALWAYS">
+                           <children>
+                              <VBox fx:id="previewCard" spacing="11.07" style="-fx-background-color: #FFFFFF;-fx-background-radius: 15.81;-fx-padding: 17.39;" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <Label fx:id="previewTitle" style="-fx-font-size: 16.6px;-fx-font-weight: bold;-fx-text-fill: #58321B;" text="Pratinjau Detail Lapangan" />
+                                    <Separator fx:id="previewTitleSeparator" />
+                                    <StackPane fx:id="previewImageContainer" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="168.75" prefWidth="302.22" style="-fx-background-color: #F1E4DC;-fx-background-radius: 11.07;">
+                                       <children>
+                                          <ImageView fx:id="courtPreviewImage" fitHeight="168.75" fitWidth="302.22" pickOnBounds="true" preserveRatio="false" smooth="true">
+                                             <clip>
+                                                <Rectangle arcHeight="22.14" arcWidth="22.14" height="168.75" width="302.22" />
+                                             </clip>
+                                             <image>
+                                                <Image url="@../../618e70119b754.jpeg" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </StackPane>
+                                    <HBox fx:id="previewNameAndStatus" alignment="CENTER_LEFT">
+                                       <children>
+                                          <Label fx:id="previewCourtName" style="-fx-font-size: 20.55px;-fx-font-weight: bold;-fx-text-fill: #58321B;" text="Lapangan 2" />
+                                          <Region fx:id="previewSpacer" HBox.hgrow="ALWAYS" />
+                                          <Label fx:id="previewCourtStatus" style="-fx-background-color: #E3F6EA;-fx-background-radius: 15.81;-fx-font-size: 11.07px;-fx-font-weight: bold;-fx-text-fill: #2E7D4F;-fx-padding: 4.74 12.65 4.74 12.65;" text="Tersedia" />
+                                       </children>
+                                    </HBox>
+                                    <GridPane fx:id="previewInformation">
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="8.89" percentWidth="40.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="8.89" percentWidth="60.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints minHeight="28.12" vgrow="NEVER" />
+                                          <RowConstraints vgrow="NEVER" />
+                                          <RowConstraints minHeight="28.12" vgrow="NEVER" />
+                                          <RowConstraints vgrow="NEVER" />
+                                          <RowConstraints minHeight="28.12" vgrow="NEVER" />
+                                          <RowConstraints vgrow="NEVER" />
+                                          <RowConstraints minHeight="28.12" vgrow="NEVER" />
+                                       </rowConstraints>
+                                       <children>
+                                       <Label fx:id="previewNumberTitle" style="-fx-font-size: 11.07px;-fx-font-weight: bold;-fx-text-fill: #805B47;" text="Nomor Lapangan" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                                       <Label fx:id="previewNumberValue" style="-fx-font-size: 11.07px;-fx-text-fill: #58321B;" text="2" GridPane.columnIndex="1" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                                       <Separator fx:id="previewSeparator1" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                                       <Label fx:id="previewTypeTitle" style="-fx-font-size: 11.07px;-fx-font-weight: bold;-fx-text-fill: #805B47;" text="Jenis Lapangan" GridPane.columnIndex="0" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                                       <Label fx:id="previewTypeValue" style="-fx-font-size: 11.07px;-fx-text-fill: #58321B;" text="Ganda" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                                       <Separator fx:id="previewSeparator2" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+                                       <Label fx:id="previewPriceTitle" style="-fx-font-size: 11.07px;-fx-font-weight: bold;-fx-text-fill: #805B47;" text="Harga Sewa / Jam" GridPane.columnIndex="0" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+                                       <Label fx:id="previewPriceValue" style="-fx-font-size: 11.07px;-fx-text-fill: #58321B;" text="Rp 60.000" GridPane.columnIndex="1" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+                                       <Separator fx:id="previewSeparator3" GridPane.columnSpan="2" GridPane.rowIndex="5" />
+                                       <Label fx:id="previewFacilitiesTitle" style="-fx-font-size: 11.07px;-fx-font-weight: bold;-fx-text-fill: #805B47;" text="Fasilitas" GridPane.columnIndex="0" GridPane.rowIndex="6" GridPane.valignment="TOP">
+                                          <GridPane.margin>
+                                             <Insets top="7.91" />
+                                          </GridPane.margin>
+                                       </Label>
+                                       <FlowPane fx:id="previewFacilitiesFlow" hgap="4.74" vgap="4.74" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                          <padding>
+                                             <Insets bottom="7.91" top="7.91" />
+                                          </padding>
+                                          <children>
+                                                <Label fx:id="previewFacility1" style="-fx-background-color: #FFF0E5;-fx-background-radius: 9.49;-fx-font-size: 9.49px;-fx-text-fill: #913601;-fx-padding: 3.16 7.91 3.16 7.91;" text="Penerangan (LED)" />
+                                                <Label fx:id="previewFacility2" style="-fx-background-color: #FFF0E5;-fx-background-radius: 9.49;-fx-font-size: 9.49px;-fx-text-fill: #913601;-fx-padding: 3.16 7.91 3.16 7.91;" text="Karpet/Lantai Standar" />
+                                                <Label fx:id="previewFacility3" style="-fx-background-color: #FFF0E5;-fx-background-radius: 9.49;-fx-font-size: 9.49px;-fx-text-fill: #913601;-fx-padding: 3.16 7.91 3.16 7.91;" text="Tempat Duduk" />
+                                          </children>
+                                       </FlowPane>
+                                       </children>
+                                    </GridPane>
+                                    <Separator fx:id="previewDescriptionSeparator" />
+                                    <VBox fx:id="previewDescription" spacing="6.32">
+                                       <children>
+                                          <Label fx:id="previewDescriptionTitle" style="-fx-font-size: 11.86px;-fx-font-weight: bold;-fx-text-fill: #58321B;" text="Deskripsi" />
+                                          <Label fx:id="previewDescriptionLabel" maxWidth="159794945321094718524911545901960474618436543151647963268752976961375667901429576469346875068214637347158377444036667249639136489498994584836204550438735233214423263374537693401075585907647867297302319538832412489529869852003287102087327302068163037972846576358994434443762230406616924103564274521363611385856.0" style="-fx-font-size: 11.07px;-fx-text-fill: #58321B;" text="Lapangan ganda dengan kondisi baik, penerangan LED, dan area bermain yang nyaman untuk latihan maupun pertandingan." wrapText="true" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

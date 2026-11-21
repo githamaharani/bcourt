@@ -1,0 +1,624 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox fx:id="mainLayout" prefHeight="720.0" prefWidth="1280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox fx:id="sidebar1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.00" prefWidth="240.01" style="-fx-background-color: #FFFCFA; -fx-border-color: transparent #EADBD2 transparent transparent;">
+               <padding>
+                  <Insets bottom="10.62" left="10.21" right="10.21" top="15.94" />
+               </padding>
+               <children>
+                  <HBox fx:id="brandContainer1" alignment="CENTER_LEFT" spacing="9.50">
+                     <children>
+                        <ImageView fx:id="logoImageView1" fitHeight="75.23" fitWidth="198.22" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@B-Court/Screenshot%202026-11-21%20144307%201.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <VBox fx:id="navigationMenu1" spacing="4.75">
+                     <VBox.margin>
+                        <Insets top="18.59" />
+                     </VBox.margin>
+                     <children>
+                        <HBox fx:id="lapanganMenu1" alignment="CENTER_LEFT" prefHeight="37.97" prefWidth="215.11" spacing="11.08" style="-fx-background-color: transparent; -fx-padding: 0.00 11.89 0.00 11.89;">
+                           <children>
+                              <ImageView fx:id="lapanganIcon1" fitHeight="16.88" fitWidth="21.33" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@B-Court/Dashboard%20icon.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="lapanganLabel1" style="-fx-font-size: 11.87px; -fx-text-fill: #58321B;" text="Dashboard" />
+                           </children>
+                        </HBox>
+                        <HBox fx:id="peralatanMenu1" alignment="CENTER_LEFT" prefHeight="37.97" prefWidth="215.11" spacing="11.08" style="-fx-background-color: transparent; -fx-padding: 0.00 11.89 0.00 11.89;">
+                           <children>
+                              <ImageView fx:id="peralatanIcon1" fitHeight="16.88" fitWidth="21.33" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@B-Court/Manajemen%20Lapangan%20icon.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="peralatanLabel1" style="-fx-font-size: 11.87px; -fx-text-fill: #58321B;" text="Manajemen Lapangan" />
+                           </children>
+                        </HBox>
+                        <HBox fx:id="dashboardMenu111" alignment="CENTER_LEFT" prefHeight="37.97" prefWidth="215.11" spacing="11.08" style="-fx-background-color: #913601; -fx-background-radius: 8.36; -fx-padding: 0.00 11.89 0.00 11.89;">
+                           <children>
+                              <ImageView fx:id="dashboardIcon111" fitHeight="16.88" fitWidth="21.33" pickOnBounds="true" preserveRatio="true">
+                                 <effect>
+                                    <ColorAdjust brightness="1.0" />
+                                 </effect>
+                                 <image>
+                                    <Image url="@B-Court/Manajemen%20Peralatan%20icon.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="dashboardLabel111" style="-fx-font-size: 11.87px; -fx-font-weight: bold; -fx-text-fill: #FFFFFF;" text="Manajemen Peralatan" />
+                           </children>
+                        </HBox>
+                        <HBox fx:id="transaksiMenu1" alignment="CENTER_LEFT" prefHeight="37.97" prefWidth="215.11" spacing="11.08" style="-fx-background-color: transparent; -fx-padding: 0.00 11.89 0.00 11.89;">
+                           <children>
+                              <ImageView fx:id="transaksiIcon1" fitHeight="16.88" fitWidth="21.33" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@B-Court/Data%20Transaksi%20icon.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="transaksiLabel1" style="-fx-font-size: 11.87px; -fx-text-fill: #58321B;" text="Data Transaksi" />
+                           </children>
+                        </HBox>
+                        <HBox fx:id="laporanMenu1" alignment="CENTER_LEFT" prefHeight="37.97" prefWidth="215.11" spacing="11.08" style="-fx-background-color: transparent; -fx-padding: 0.00 11.89 0.00 11.89;">
+                           <children>
+                              <ImageView fx:id="laporanIcon1" fitHeight="16.88" fitWidth="21.33" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@B-Court/Laporan%20icon.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="laporanLabel1" style="-fx-font-size: 11.87px; -fx-text-fill: #58321B;" text="Laporan" />
+                           </children>
+                        </HBox>
+                        <HBox fx:id="penggunaMenu1" alignment="CENTER_LEFT" prefHeight="37.97" prefWidth="215.11" spacing="11.08" style="-fx-background-color: transparent; -fx-padding: 0.00 11.89 0.00 11.89;">
+                           <children>
+                              <ImageView fx:id="penggunaIcon1" fitHeight="16.88" fitWidth="21.33" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@B-Court/Manajemen%20Pengguna%20icon.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="penggunaLabel1" style="-fx-font-size: 11.87px; -fx-text-fill: #58321B;" text="Manajemen Pengguna" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <Region fx:id="sidebarSpacer1" VBox.vgrow="ALWAYS" />
+                  <Separator prefWidth="215.11" />
+                  <HBox fx:id="profileMenu1" alignment="CENTER_LEFT" prefHeight="43.59" prefWidth="215.11" spacing="11.08" style="-fx-padding: 0.00 11.89 0.00 11.89;">
+                     <children>
+                        <ImageView fx:id="profileIcon1" fitHeight="16.88" fitWidth="21.33" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@B-Court/Profile%20icon.png" />
+                           </image>
+                        </ImageView>
+                        <Label style="-fx-font-size: 11.87px; -fx-text-fill: #58321B;" text="Profil Saya" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox fx:id="mainContent" prefHeight="720.0" prefWidth="1030.0" spacing="12.0" style="-fx-background-color: #F8EFEA;" HBox.hgrow="ALWAYS">
+               <padding>
+                  <Insets bottom="18.0" left="18.0" right="18.0" top="18.0" />
+               </padding>
+               <children>
+                  <HBox fx:id="topHeader" alignment="TOP_LEFT">
+                     <children>
+                        <VBox fx:id="pageInformation" spacing="3.0">
+                           <children>
+                              <HBox fx:id="breadcrumbContainer" alignment="CENTER_LEFT" spacing="7.0">
+                                 <children>
+                                    <Hyperlink fx:id="dashboardBreadcrumb" mnemonicParsing="false" style="-fx-font-size: 13px; -fx-text-fill: #805B47; -fx-border-color: transparent; -fx-padding: 0;" text="Dashboard" underline="false" />
+                                    <Label fx:id="separator1" style="-fx-font-size: 13px; -fx-text-fill: #805B47;" text="&gt;" />
+                                    <Label fx:id="currentBreadcrumb" style="-fx-font-size: 13px; -fx-text-fill: #58321B;" text="Manajemen Peralatan" />
+                                 </children>
+                              </HBox>
+                              <Label fx:id="pageTitle" style="-fx-font-size: 27px; -fx-font-weight: bold; -fx-text-fill: #58321B;" text="Manajemen Peralatan" />
+                              <Label fx:id="pageDescription" style="-fx-font-size: 13px; -fx-text-fill: #805B47;" text="Kelola data peralatan badminton, atur ketersediaan, kondisi, dan informasi lainnya." />
+                           </children>
+                        </VBox>
+                        <Region fx:id="headerSpacer" HBox.hgrow="ALWAYS" />
+                        <HBox fx:id="headerActions" alignment="CENTER_LEFT" spacing="12.0">
+                           <children>
+                              <ImageView fx:id="notificationIcon" fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true" />
+                              <Separator orientation="VERTICAL" prefHeight="30.0" />
+                              <ImageView fx:id="adminProfileImageView" fitHeight="38.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@B-Court/Profile%20icon.png" />
+                                 </image></ImageView>
+                              <VBox fx:id="adminInformation" alignment="CENTER_LEFT" spacing="1.0">
+                                 <children>
+                                    <Label fx:id="adminNameLabel" style="-fx-font-size: 13px; -fx-font-weight: bold; -fx-text-fill: #58321B;" text="Admin" />
+                                    <Label fx:id="adminRoleLabel" style="-fx-font-size: 11px; -fx-text-fill: #9B7967;" text="Administrator" />
+                                 </children>
+                              </VBox>
+                              <ImageView fx:id="dropdownIcon" fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <GridPane fx:id="statisticsGrid1" hgap="16.0" prefHeight="110.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="25.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="25.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="25.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="25.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="110.0" prefHeight="110.0" vgrow="NEVER" />
+                     </rowConstraints>
+                     <children>
+                        <HBox fx:id="totalCourtCard1" alignment="CENTER_LEFT" spacing="14.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 18; -fx-padding: 16;" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                           <children>
+                              <StackPane fx:id="totalCourtIconContainer1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="62.0" prefWidth="62.0" style="-fx-background-color: #FDE8D4; -fx-background-radius: 16;">
+                                 <children>
+                                    <ImageView fx:id="totalCourtIcon1" fitHeight="42.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@B-Court/Manajemen%20Peralatan%20icon.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </StackPane>
+                              <VBox fx:id="totalCourtInformation1" alignment="CENTER_LEFT" spacing="2.0">
+                                 <children>
+                                    <Label style="-fx-font-size: 14px; -fx-text-fill: #9B7967;" text="Total Lapangan" />
+                                    <Label fx:id="totalCourtValue1" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #58321B;" text="12" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox fx:id="availableCourtCard1" alignment="CENTER_LEFT" spacing="14.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 18; -fx-padding: 16;" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                           <children>
+                              <StackPane fx:id="availableCourtIconContainer1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="62.0" prefWidth="62.0" style="-fx-background-color: #E3F6EA; -fx-background-radius: 16;">
+                                 <children>
+                                    <ImageView fx:id="availableCourtIcon1" fitHeight="42.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@B-Court/Ikon%20Tersedia.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </StackPane>
+                              <VBox fx:id="availableCourtInformation1" alignment="CENTER_LEFT" spacing="2.0">
+                                 <children>
+                                    <Label style="-fx-font-size: 14px; -fx-text-fill: #9B7967;" text="Tersedia" />
+                                    <Label fx:id="availableCourtValue1" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #58321B;" text="9" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox fx:id="occupiedCourtCard1" alignment="CENTER_LEFT" spacing="14.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 18; -fx-padding: 16;" GridPane.columnIndex="2" GridPane.rowIndex="0">
+                           <children>
+                              <StackPane fx:id="occupiedCourtIconContainer1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="62.0" prefWidth="62.0" style="-fx-background-color: #FDE6E8; -fx-background-radius: 16;">
+                                 <children>
+                                    <ImageView fx:id="occupiedCourtIcon1" fitHeight="42.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@B-Court/Ikon%20Terpakai.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </StackPane>
+                              <VBox fx:id="occupiedCourtInformation1" alignment="CENTER_LEFT" spacing="2.0">
+                                 <children>
+                                    <Label style="-fx-font-size: 14px; -fx-text-fill: #9B7967;" text="Terpakai" />
+                                    <Label fx:id="occupiedCourtValue1" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #58321B;" text="2" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox fx:id="maintenanceCourtCard1" alignment="CENTER_LEFT" spacing="14.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 18; -fx-padding: 16;" GridPane.columnIndex="3" GridPane.rowIndex="0">
+                           <children>
+                              <StackPane fx:id="maintenanceCourtIconContainer1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="62.0" prefWidth="62.0" style="-fx-background-color: #FDE8D4; -fx-background-radius: 16;">
+                                 <children>
+                                    <ImageView fx:id="maintenanceCourtIcon1" fitHeight="42.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@B-Court/Ikon%20Perlu%20Perawatan.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </StackPane>
+                              <VBox fx:id="maintenanceCourtInformation1" alignment="CENTER_LEFT" spacing="2.0">
+                                 <children>
+                                    <Label style="-fx-font-size: 14px; -fx-text-fill: #9B7967;" text="Perlu Perawatan" />
+                                    <Label fx:id="maintenanceCourtValue1" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #58321B;" text="1" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </GridPane>
+                  <VBox fx:id="equipmentTableCard" spacing="10.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 16; -fx-background-radius: 18; -fx-padding: 16;">
+                     <children>
+                        <HBox fx:id="tableHeader" alignment="CENTER_LEFT" spacing="10.0">
+                           <children>
+                              <Label fx:id="tableTitle" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #58321B;" text="Data Peralatan" />
+                              <Region fx:id="tableHeaderSpacer" HBox.hgrow="ALWAYS" />
+                              <TextField fx:id="searchEquipmentField" prefHeight="36.0" prefWidth="180.0" promptText="Cari peralatan..." style="-fx-background-color: #FFFCFA; -fx-background-radius: 18; -fx-border-color: #EADBD2; -fx-border-radius: 18; -fx-font-size: 13px; -fx-text-fill: #58321B; -fx-prompt-text-fill: #B9A59B; -fx-padding: 0 14 0 14;" />
+                              <Button fx:id="addEquipmentButton" mnemonicParsing="false" prefHeight="36.0" prefWidth="170.0" style="-fx-background-color: #EF5C00; -fx-background-radius: 20; -fx-text-fill: #FFFFFF; -fx-font-size: 13px; -fx-font-weight: bold;" text="+ Tambah Peralatan" />
+                           </children>
+                        </HBox>
+                        <GridPane fx:id="tableColumnHeader" prefHeight="34.0" style="-fx-background-color: #F5E8E1; -fx-background-radius: 10;">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="5" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="28" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="14" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="9" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="12" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="14" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="18" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="34.0" prefHeight="34.0" vgrow="NEVER" />
+                           </rowConstraints>
+                           <children>
+                              <Label fx:id="columnHeader1" style="-fx-font-size: 12px; -fx-font-weight: bold; -fx-text-fill: #58321B; -fx-padding: 0 0 0 10;" text="No." GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                              <Label fx:id="columnHeader2" style="-fx-font-size: 12px; -fx-font-weight: bold; -fx-text-fill: #58321B; -fx-padding: 0 0 0 10;" text="Nama Peralatan" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                              <Label fx:id="columnHeader3" style="-fx-font-size: 12px; -fx-font-weight: bold; -fx-text-fill: #58321B; -fx-padding: 0 0 0 10;" text="Jenis" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                              <Label fx:id="columnHeader4" style="-fx-font-size: 12px; -fx-font-weight: bold; -fx-text-fill: #58321B; -fx-padding: 0 0 0 10;" text="Jumlah" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                              <Label fx:id="columnHeader5" style="-fx-font-size: 12px; -fx-font-weight: bold; -fx-text-fill: #58321B; -fx-padding: 0 0 0 10;" text="Kondisi" GridPane.columnIndex="4" GridPane.halignment="LEFT" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                              <Label fx:id="columnHeader6" style="-fx-font-size: 12px; -fx-font-weight: bold; -fx-text-fill: #58321B; -fx-padding: 0 0 0 10;" text="Status" GridPane.columnIndex="5" GridPane.halignment="LEFT" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                              <Label fx:id="columnHeader7" style="-fx-font-size: 12px; -fx-font-weight: bold; -fx-text-fill: #58321B; -fx-padding: 0 0 0 10;" text="Aksi" GridPane.columnIndex="6" GridPane.halignment="LEFT" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                           </children>
+                        </GridPane>
+                        <VBox fx:id="tableRows">
+                           <children>
+                              <GridPane fx:id="equipmentRow1" minHeight="44.0" prefHeight="44.0" style="-fx-border-color: transparent transparent #F0E2DA transparent;">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="5" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="28" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="14" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="9" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="12" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="14" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="18" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="44.0" prefHeight="44.0" vgrow="NEVER" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Label fx:id="row1No" style="-fx-font-size: 13px; -fx-text-fill: #58321B; -fx-padding: 0 0 0 10;" text="1" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                                    <Label fx:id="row1Name" style="-fx-font-size: 13px; -fx-text-fill: #58321B; -fx-padding: 0 0 0 10; -fx-font-weight: bold;" text="Raket Yonex Astrox 88D" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                                    <Label fx:id="row1Type" style="-fx-font-size: 13px; -fx-text-fill: #58321B; -fx-padding: 0 0 0 10;" text="Raket" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                                    <Label fx:id="row1Quantity" style="-fx-font-size: 13px; -fx-text-fill: #58321B; -fx-padding: 0 0 0 10;" text="4" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                                    <Label fx:id="row1Condition" style="-fx-font-size: 13px; -fx-text-fill: #58321B; -fx-padding: 0 0 0 10;" text="Baik" GridPane.columnIndex="4" GridPane.halignment="LEFT" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                                    <Label fx:id="row1Status" style="-fx-background-color: #E3F6EA; -fx-background-radius: 14; -fx-font-size: 12px; -fx-font-weight: bold; -fx-text-fill: #2E7D4F; -fx-padding: 3 12 3 12;" text="Tersedia" GridPane.columnIndex="5" GridPane.halignment="LEFT" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                                    <HBox fx:id="actionContainer2" alignment="CENTER" spacing="6.32" GridPane.columnIndex="6">
+                                       <children>
+                                          <Button fx:id="detailButton21" mnemonicParsing="false" prefHeight="26.72" prefWidth="35.56" style="-fx-background-color: #F5E8E1; -fx-background-radius: 10; -fx-padding: 0.00;">
+                                             <graphic>
+                                                <ImageView fx:id="detailActionIcon2" fitHeight="14.06" fitWidth="17.78" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@B-Court/Ikon%20detail.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                          <Button fx:id="editButton21" mnemonicParsing="false" prefHeight="26.72" prefWidth="35.56" style="-fx-background-color: #F5E8E1; -fx-background-radius: 10; -fx-padding: 0.00;">
+                                             <graphic>
+                                                <ImageView fx:id="editActionIcon2" fitHeight="14.06" fitWidth="17.78" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@B-Court/Ikon%20edit.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                          <Button fx:id="deleteButton21" mnemonicParsing="false" prefHeight="26.72" prefWidth="35.56" style="-fx-background-color: #FDE6E8; -fx-background-radius: 10; -fx-padding: 0.00;">
+                                             <graphic>
+                                                <ImageView fx:id="deleteActionIcon2" fitHeight="14.06" fitWidth="17.78" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@B-Court/Ikon%20hapus.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </GridPane>
+                              <GridPane fx:id="equipmentRow2" minHeight="44.0" prefHeight="44.0" style="-fx-border-color: transparent transparent #F0E2DA transparent;">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="5" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="28" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="14" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="9" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="12" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="14" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="18" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="44.0" prefHeight="44.0" vgrow="NEVER" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Label fx:id="row2No" style="-fx-font-size: 13px; -fx-text-fill: #58321B; -fx-padding: 0 0 0 10;" text="2" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                                    <Label fx:id="row2Name" style="-fx-font-size: 13px; -fx-text-fill: #58321B; -fx-padding: 0 0 0 10; -fx-font-weight: bold;" text="Raket Li-Ning Windstorm 72" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                                    <Label fx:id="row2Type" style="-fx-font-size: 13px; -fx-text-fill: #58321B; -fx-padding: 0 0 0 10;" text="Raket" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                                    <Label fx:id="row2Quantity" style="-fx-font-size: 13px; -fx-text-fill: #58321B; -fx-padding: 0 0 0 10;" text="3" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                                    <Label fx:id="row2Condition" style="-fx-font-size: 13px; -fx-text-fill: #58321B; -fx-padding: 0 0 0 10;" text="Baik" GridPane.columnIndex="4" GridPane.halignment="LEFT" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                                    <Label fx:id="row2Status" style="-fx-background-color: #FDE3E5; -fx-background-radius: 14; -fx-font-size: 12px; -fx-font-weight: bold; -fx-text-fill: #C0262D; -fx-padding: 3 12 3 12;" text="Terpakai" GridPane.columnIndex="5" GridPane.halignment="LEFT" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                                    <HBox fx:id="actionContainer21" alignment="CENTER" spacing="6.32" GridPane.columnIndex="6">
+                                       <children>
+                                          <Button fx:id="detailButton211" mnemonicParsing="false" prefHeight="26.72" prefWidth="35.56" style="-fx-background-color: #F5E8E1; -fx-background-radius: 10; -fx-padding: 0.00;">
+                                             <graphic>
+                                                <ImageView fx:id="detailActionIcon21" fitHeight="14.06" fitWidth="17.78" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@B-Court/Ikon%20detail.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                          <Button fx:id="editButton211" mnemonicParsing="false" prefHeight="26.72" prefWidth="35.56" style="-fx-background-color: #F5E8E1; -fx-background-radius: 10; -fx-padding: 0.00;">
+                                             <graphic>
+                                                <ImageView fx:id="editActionIcon21" fitHeight="14.06" fitWidth="17.78" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@B-Court/Ikon%20edit.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                          <Button fx:id="deleteButton211" mnemonicParsing="false" prefHeight="26.72" prefWidth="35.56" style="-fx-background-color: #FDE6E8; -fx-background-radius: 10; -fx-padding: 0.00;">
+                                             <graphic>
+                                                <ImageView fx:id="deleteActionIcon21" fitHeight="14.06" fitWidth="17.78" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@B-Court/Ikon%20hapus.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </GridPane>
+                              <GridPane fx:id="equipmentRow3" minHeight="44.0" prefHeight="44.0" style="-fx-border-color: transparent transparent #F0E2DA transparent;">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="5" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="28" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="14" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="9" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="12" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="14" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="18" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="44.0" prefHeight="44.0" vgrow="NEVER" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Label fx:id="row3No" style="-fx-font-size: 13px; -fx-text-fill: #58321B; -fx-padding: 0 0 0 10;" text="3" GridPane.halignment="LEFT" GridPane.valignment="CENTER" />
+                                    <Label fx:id="row3Name" style="-fx-font-size: 13px; -fx-text-fill: #58321B; -fx-padding: 0 0 0 10; -fx-font-weight: bold;" text="Shuttlecock Yonex AS-30" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="CENTER" />
+                                    <Label fx:id="row3Type" style="-fx-font-size: 13px; -fx-text-fill: #58321B; -fx-padding: 0 0 0 10;" text="Shuttlecock" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.valignment="CENTER" />
+                                    <Label fx:id="row3Quantity" style="-fx-font-size: 13px; -fx-text-fill: #58321B; -fx-padding: 0 0 0 10;" text="10" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.valignment="CENTER" />
+                                    <Label fx:id="row3Condition" style="-fx-font-size: 13px; -fx-text-fill: #58321B; -fx-padding: 0 0 0 10;" text="Baik" GridPane.columnIndex="4" GridPane.halignment="LEFT" GridPane.valignment="CENTER" />
+                                    <Label fx:id="row3Status" style="-fx-background-color: #E3F6EA; -fx-background-radius: 14; -fx-font-size: 12px; -fx-font-weight: bold; -fx-text-fill: #2E7D4F; -fx-padding: 3 12 3 12;" text="Tersedia" GridPane.columnIndex="5" GridPane.halignment="LEFT" GridPane.valignment="CENTER" />
+                                    <HBox fx:id="actionContainer211" alignment="CENTER" spacing="6.32" GridPane.columnIndex="6">
+                                       <children>
+                                          <Button fx:id="detailButton2111" mnemonicParsing="false" prefHeight="26.72" prefWidth="35.56" style="-fx-background-color: #F5E8E1; -fx-background-radius: 10; -fx-padding: 0.00;">
+                                             <graphic>
+                                                <ImageView fx:id="detailActionIcon211" fitHeight="14.06" fitWidth="17.78" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@B-Court/Ikon%20detail.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                          <Button fx:id="editButton2111" mnemonicParsing="false" prefHeight="26.72" prefWidth="35.56" style="-fx-background-color: #F5E8E1; -fx-background-radius: 10; -fx-padding: 0.00;">
+                                             <graphic>
+                                                <ImageView fx:id="editActionIcon211" fitHeight="14.06" fitWidth="17.78" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@B-Court/Ikon%20edit.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                          <Button fx:id="deleteButton2111" mnemonicParsing="false" prefHeight="26.72" prefWidth="35.56" style="-fx-background-color: #FDE6E8; -fx-background-radius: 10; -fx-padding: 0.00;">
+                                             <graphic>
+                                                <ImageView fx:id="deleteActionIcon211" fitHeight="14.06" fitWidth="17.78" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@B-Court/Ikon%20hapus.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </GridPane>
+                              <GridPane fx:id="equipmentRow4" minHeight="44.0" prefHeight="44.0" style="-fx-border-color: transparent transparent #F0E2DA transparent;">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="5" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="28" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="14" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="9" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="12" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="14" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="18" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="44.0" prefHeight="44.0" vgrow="NEVER" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Label fx:id="row4No" style="-fx-font-size: 13px; -fx-text-fill: #58321B; -fx-padding: 0 0 0 10;" text="4" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                                    <Label fx:id="row4Name" style="-fx-font-size: 13px; -fx-text-fill: #58321B; -fx-padding: 0 0 0 10; -fx-font-weight: bold;" text="Net Badminton" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                                    <Label fx:id="row4Type" style="-fx-font-size: 13px; -fx-text-fill: #58321B; -fx-padding: 0 0 0 10;" text="Net" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                                    <Label fx:id="row4Quantity" style="-fx-font-size: 13px; -fx-text-fill: #58321B; -fx-padding: 0 0 0 10;" text="2" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                                    <Label fx:id="row4Condition" style="-fx-font-size: 13px; -fx-text-fill: #58321B; -fx-padding: 0 0 0 10;" text="Baik" GridPane.columnIndex="4" GridPane.halignment="LEFT" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                                    <Label fx:id="row4Status" style="-fx-background-color: #E3F6EA; -fx-background-radius: 14; -fx-font-size: 12px; -fx-font-weight: bold; -fx-text-fill: #2E7D4F; -fx-padding: 3 12 3 12;" text="Tersedia" GridPane.columnIndex="5" GridPane.halignment="LEFT" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                                    <HBox fx:id="actionContainer212" alignment="CENTER" spacing="6.32" GridPane.columnIndex="6">
+                                       <children>
+                                          <Button fx:id="detailButton2112" mnemonicParsing="false" prefHeight="26.72" prefWidth="35.56" style="-fx-background-color: #F5E8E1; -fx-background-radius: 10; -fx-padding: 0.00;">
+                                             <graphic>
+                                                <ImageView fx:id="detailActionIcon212" fitHeight="14.06" fitWidth="17.78" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@B-Court/Ikon%20detail.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                          <Button fx:id="editButton2112" mnemonicParsing="false" prefHeight="26.72" prefWidth="35.56" style="-fx-background-color: #F5E8E1; -fx-background-radius: 10; -fx-padding: 0.00;">
+                                             <graphic>
+                                                <ImageView fx:id="editActionIcon212" fitHeight="14.06" fitWidth="17.78" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@B-Court/Ikon%20edit.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                          <Button fx:id="deleteButton2112" mnemonicParsing="false" prefHeight="26.72" prefWidth="35.56" style="-fx-background-color: #FDE6E8; -fx-background-radius: 10; -fx-padding: 0.00;">
+                                             <graphic>
+                                                <ImageView fx:id="deleteActionIcon212" fitHeight="14.06" fitWidth="17.78" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@B-Court/Ikon%20hapus.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </GridPane>
+                              <GridPane fx:id="equipmentRow5" minHeight="44.0" prefHeight="44.0" style="-fx-border-color: transparent transparent #F0E2DA transparent;">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="5" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="28" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="14" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="9" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="12" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="14" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="18" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="44.0" prefHeight="44.0" vgrow="NEVER" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Label fx:id="row5No" style="-fx-font-size: 13px; -fx-text-fill: #58321B; -fx-padding: 0 0 0 10;" text="5" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                                    <Label fx:id="row5Name" style="-fx-font-size: 13px; -fx-text-fill: #58321B; -fx-padding: 0 0 0 10; -fx-font-weight: bold;" text="Tiang Net" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                                    <Label fx:id="row5Type" style="-fx-font-size: 13px; -fx-text-fill: #58321B; -fx-padding: 0 0 0 10;" text="Aksesori" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                                    <Label fx:id="row5Quantity" style="-fx-font-size: 13px; -fx-text-fill: #58321B; -fx-padding: 0 0 0 10;" text="2" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                                    <Label fx:id="row5Condition" style="-fx-font-size: 13px; -fx-text-fill: #58321B; -fx-padding: 0 0 0 10;" text="Baik" GridPane.columnIndex="4" GridPane.halignment="LEFT" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                                    <Label fx:id="row5Status" style="-fx-background-color: #E3F6EA; -fx-background-radius: 14; -fx-font-size: 12px; -fx-font-weight: bold; -fx-text-fill: #2E7D4F; -fx-padding: 3 12 3 12;" text="Tersedia" GridPane.columnIndex="5" GridPane.halignment="LEFT" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                                    <HBox fx:id="actionContainer213" alignment="CENTER" spacing="6.32" GridPane.columnIndex="6">
+                                       <children>
+                                          <Button fx:id="detailButton2113" mnemonicParsing="false" prefHeight="26.72" prefWidth="35.56" style="-fx-background-color: #F5E8E1; -fx-background-radius: 10; -fx-padding: 0.00;">
+                                             <graphic>
+                                                <ImageView fx:id="detailActionIcon213" fitHeight="14.06" fitWidth="17.78" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@B-Court/Ikon%20detail.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                          <Button fx:id="editButton2113" mnemonicParsing="false" prefHeight="26.72" prefWidth="35.56" style="-fx-background-color: #F5E8E1; -fx-background-radius: 10; -fx-padding: 0.00;">
+                                             <graphic>
+                                                <ImageView fx:id="editActionIcon213" fitHeight="14.06" fitWidth="17.78" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@B-Court/Ikon%20edit.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                          <Button fx:id="deleteButton2113" mnemonicParsing="false" prefHeight="26.72" prefWidth="35.56" style="-fx-background-color: #FDE6E8; -fx-background-radius: 10; -fx-padding: 0.00;">
+                                             <graphic>
+                                                <ImageView fx:id="deleteActionIcon213" fitHeight="14.06" fitWidth="17.78" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@B-Court/Ikon%20hapus.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </GridPane>
+                              <GridPane fx:id="equipmentRow6" minHeight="44.0" prefHeight="44.0" style="-fx-border-color: transparent transparent #F0E2DA transparent;">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="5" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="28" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="14" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="9" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="12" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="14" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="18" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="44.0" prefHeight="44.0" vgrow="NEVER" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Label fx:id="row6No" style="-fx-font-size: 13px; -fx-text-fill: #58321B; -fx-padding: 0 0 0 10;" text="6" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                                    <Label fx:id="row6Name" style="-fx-font-size: 13px; -fx-text-fill: #58321B; -fx-padding: 0 0 0 10; -fx-font-weight: bold;" text="Papan Skor Manual" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                                    <Label fx:id="row6Type" style="-fx-font-size: 13px; -fx-text-fill: #58321B; -fx-padding: 0 0 0 10;" text="Aksesori" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                                    <Label fx:id="row6Quantity" style="-fx-font-size: 13px; -fx-text-fill: #58321B; -fx-padding: 0 0 0 10;" text="1" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                                    <Label fx:id="row6Condition" style="-fx-font-size: 13px; -fx-text-fill: #C0262D; -fx-padding: 0 0 0 10;" text="Rusak" GridPane.columnIndex="4" GridPane.halignment="LEFT" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                                    <Label fx:id="row6Status" style="-fx-background-color: #FDE3D1; -fx-background-radius: 14; -fx-font-size: 12px; -fx-font-weight: bold; -fx-text-fill: #B8480A; -fx-padding: 3 12 3 12;" text="Perawatan" GridPane.columnIndex="5" GridPane.halignment="LEFT" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                                    <HBox fx:id="actionContainer214" alignment="CENTER" spacing="6.32" GridPane.columnIndex="6">
+                                       <children>
+                                          <Button fx:id="detailButton2114" mnemonicParsing="false" prefHeight="26.72" prefWidth="35.56" style="-fx-background-color: #F5E8E1; -fx-background-radius: 10; -fx-padding: 0.00;">
+                                             <graphic>
+                                                <ImageView fx:id="detailActionIcon214" fitHeight="14.06" fitWidth="17.78" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@B-Court/Ikon%20detail.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                          <Button fx:id="editButton2114" mnemonicParsing="false" prefHeight="26.72" prefWidth="35.56" style="-fx-background-color: #F5E8E1; -fx-background-radius: 10; -fx-padding: 0.00;">
+                                             <graphic>
+                                                <ImageView fx:id="editActionIcon214" fitHeight="14.06" fitWidth="17.78" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@B-Court/Ikon%20edit.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                          <Button fx:id="deleteButton2114" mnemonicParsing="false" prefHeight="26.72" prefWidth="35.56" style="-fx-background-color: #FDE6E8; -fx-background-radius: 10; -fx-padding: 0.00;">
+                                             <graphic>
+                                                <ImageView fx:id="deleteActionIcon214" fitHeight="14.06" fitWidth="17.78" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@B-Court/Ikon%20hapus.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </VBox>
+                        <HBox fx:id="paginationContainer" alignment="CENTER_LEFT" spacing="6.0">
+                           <children>
+                              <Label fx:id="paginationInfoLabel" style="-fx-font-size: 12px; -fx-text-fill: #805B47;" text="Menampilkan 1–6 dari 12 data" />
+                              <Region fx:id="paginationSpacer" HBox.hgrow="ALWAYS" />
+                              <Button fx:id="previousPageButton" mnemonicParsing="false" prefHeight="32.0" prefWidth="32.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #EADBD2; -fx-border-radius: 8; -fx-text-fill: #58321B; -fx-background-radius: 8; -fx-font-size: 13px; -fx-font-weight: bold; -fx-padding: 0;" text="‹" />
+                              <Button fx:id="page1Button" mnemonicParsing="false" prefHeight="32.0" prefWidth="32.0" style="-fx-background-color: #EF5C00; -fx-text-fill: #FFFFFF; -fx-background-radius: 8; -fx-font-size: 13px; -fx-font-weight: bold; -fx-padding: 0;" text="1" />
+                              <Button fx:id="page2Button" mnemonicParsing="false" prefHeight="32.0" prefWidth="32.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #EADBD2; -fx-border-radius: 8; -fx-text-fill: #58321B; -fx-background-radius: 8; -fx-font-size: 13px; -fx-font-weight: bold; -fx-padding: 0;" text="2" />
+                              <Button fx:id="nextPageButton" mnemonicParsing="false" prefHeight="32.0" prefWidth="32.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #EADBD2; -fx-border-radius: 8; -fx-text-fill: #58321B; -fx-background-radius: 8; -fx-font-size: 13px; -fx-font-weight: bold; -fx-padding: 0;" text="›" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

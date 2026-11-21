@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox fx:id="mainLayout" prefHeight="720.0" prefWidth="1280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox fx:id="sidebar1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.00" prefWidth="240.01" style="-fx-background-color: #FFFCFA; -fx-border-color: transparent #EADBD2 transparent transparent;">
+               <padding>
+                  <Insets bottom="10.62" left="10.21" right="10.21" top="15.94" />
+               </padding>
+               <children>
+                  <HBox fx:id="brandContainer1" alignment="CENTER_LEFT" spacing="9.50">
+                     <children>
+                        <ImageView fx:id="logoImageView1" fitHeight="75.23" fitWidth="198.22" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@B-Court/Screenshot%202026-11-21%20144307%201.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <VBox fx:id="navigationMenu1" spacing="4.75">
+                     <VBox.margin>
+                        <Insets top="18.59" />
+                     </VBox.margin>
+                     <children>
+                        <HBox fx:id="lapanganMenu1" alignment="CENTER_LEFT" prefHeight="37.97" prefWidth="215.11" spacing="11.08" style="-fx-background-color: transparent; -fx-padding: 0.00 11.89 0.00 11.89;">
+                           <children>
+                              <ImageView fx:id="lapanganIcon1" fitHeight="16.88" fitWidth="21.33" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@B-Court/Dashboard%20icon.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="lapanganLabel1" style="-fx-font-size: 11.87px; -fx-text-fill: #58321B;" text="Dashboard" />
+                           </children>
+                        </HBox>
+                        <HBox fx:id="peralatanMenu1" alignment="CENTER_LEFT" prefHeight="37.97" prefWidth="215.11" spacing="11.08" style="-fx-background-color: transparent; -fx-padding: 0.00 11.89 0.00 11.89;">
+                           <children>
+                              <ImageView fx:id="peralatanIcon1" fitHeight="16.88" fitWidth="21.33" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@B-Court/Manajemen%20Lapangan%20icon.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="peralatanLabel1" style="-fx-font-size: 11.87px; -fx-text-fill: #58321B;" text="Manajemen Lapangan" />
+                           </children>
+                        </HBox>
+                        <HBox fx:id="dashboardMenu111" alignment="CENTER_LEFT" prefHeight="37.97" prefWidth="215.11" spacing="11.08" style="-fx-background-color: #913601; -fx-background-radius: 8.36; -fx-padding: 0.00 11.89 0.00 11.89;">
+                           <children>
+                              <ImageView fx:id="dashboardIcon111" fitHeight="16.88" fitWidth="21.33" pickOnBounds="true" preserveRatio="true">
+                                 <effect>
+                                    <ColorAdjust brightness="1.0" />
+                                 </effect>
+                                 <image>
+                                    <Image url="@B-Court/Manajemen%20Peralatan%20icon.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="dashboardLabel111" style="-fx-font-size: 11.87px; -fx-font-weight: bold; -fx-text-fill: #FFFFFF;" text="Manajemen Peralatan" />
+                           </children>
+                        </HBox>
+                        <HBox fx:id="transaksiMenu1" alignment="CENTER_LEFT" prefHeight="37.97" prefWidth="215.11" spacing="11.08" style="-fx-background-color: transparent; -fx-padding: 0.00 11.89 0.00 11.89;">
+                           <children>
+                              <ImageView fx:id="transaksiIcon1" fitHeight="16.88" fitWidth="21.33" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@B-Court/Data%20Transaksi%20icon.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="transaksiLabel1" style="-fx-font-size: 11.87px; -fx-text-fill: #58321B;" text="Data Transaksi" />
+                           </children>
+                        </HBox>
+                        <HBox fx:id="laporanMenu1" alignment="CENTER_LEFT" prefHeight="37.97" prefWidth="215.11" spacing="11.08" style="-fx-background-color: transparent; -fx-padding: 0.00 11.89 0.00 11.89;">
+                           <children>
+                              <ImageView fx:id="laporanIcon1" fitHeight="16.88" fitWidth="21.33" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@B-Court/Laporan%20icon.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="laporanLabel1" style="-fx-font-size: 11.87px; -fx-text-fill: #58321B;" text="Laporan" />
+                           </children>
+                        </HBox>
+                        <HBox fx:id="penggunaMenu1" alignment="CENTER_LEFT" prefHeight="37.97" prefWidth="215.11" spacing="11.08" style="-fx-background-color: transparent; -fx-padding: 0.00 11.89 0.00 11.89;">
+                           <children>
+                              <ImageView fx:id="penggunaIcon1" fitHeight="16.88" fitWidth="21.33" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@B-Court/Manajemen%20Pengguna%20icon.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="penggunaLabel1" style="-fx-font-size: 11.87px; -fx-text-fill: #58321B;" text="Manajemen Pengguna" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <Region fx:id="sidebarSpacer1" VBox.vgrow="ALWAYS" />
+                  <Separator prefWidth="215.11" />
+                  <HBox fx:id="profileMenu1" alignment="CENTER_LEFT" prefHeight="43.59" prefWidth="215.11" spacing="11.08" style="-fx-padding: 0.00 11.89 0.00 11.89;">
+                     <children>
+                        <ImageView fx:id="profileIcon1" fitHeight="16.88" fitWidth="21.33" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@B-Court/Profile%20icon.png" />
+                           </image>
+                        </ImageView>
+                        <Label style="-fx-font-size: 11.87px; -fx-text-fill: #58321B;" text="Profil Saya" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox fx:id="mainContent" prefHeight="720.0" prefWidth="1030.0" spacing="12.0" style="-fx-background-color: #F8EFEA;" HBox.hgrow="ALWAYS">
+               <padding>
+                  <Insets bottom="18.0" left="18.0" right="18.0" top="18.0" />
+               </padding>
+               <children>
+                  <HBox fx:id="topHeader" alignment="TOP_LEFT">
+                     <children>
+                        <VBox fx:id="pageInformation" spacing="3.0">
+                           <children>
+                              <HBox fx:id="breadcrumbContainer" alignment="CENTER_LEFT" spacing="7.0">
+                                 <children>
+                                    <Hyperlink fx:id="dashboardBreadcrumb" mnemonicParsing="false" style="-fx-font-size: 13px; -fx-text-fill: #805B47; -fx-border-color: transparent; -fx-padding: 0;" text="Dashboard" underline="false" />
+                                    <Label fx:id="separator1" style="-fx-font-size: 13px; -fx-text-fill: #805B47;" text="&gt;" />
+                                    <Hyperlink fx:id="equipmentBreadcrumb" mnemonicParsing="false" style="-fx-font-size: 13px; -fx-text-fill: #805B47; -fx-border-color: transparent; -fx-padding: 0;" text="Manajemen Peralatan" underline="false" />
+                                    <Label fx:id="separator2" style="-fx-font-size: 13px; -fx-text-fill: #805B47;" text="&gt;" />
+                                    <Label fx:id="currentBreadcrumb" style="-fx-font-size: 13px; -fx-text-fill: #58321B;" text="Tambah Peralatan" />
+                                 </children>
+                              </HBox>
+                              <Label fx:id="pageTitle" style="-fx-font-size: 27px; -fx-font-weight: bold; -fx-text-fill: #58321B;" text="Tambah Peralatan" />
+                              <Label fx:id="pageDescription" style="-fx-font-size: 13px; -fx-text-fill: #805B47;" text="Tambahkan data peralatan badminton baru ke dalam sistem." />
+                           </children>
+                        </VBox>
+                        <Region fx:id="headerSpacer" HBox.hgrow="ALWAYS" />
+                        <HBox fx:id="headerActions" alignment="CENTER_LEFT" spacing="12.0">
+                           <children>
+                              <ImageView fx:id="notificationIcon" fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true" />
+                              <Separator orientation="VERTICAL" prefHeight="30.0" />
+                              <ImageView fx:id="adminProfileImageView" fitHeight="38.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@B-Court/Profile%20icon.png" />
+                                 </image></ImageView>
+                              <VBox fx:id="adminInformation" alignment="CENTER_LEFT" spacing="1.0">
+                                 <children>
+                                    <Label fx:id="adminNameLabel" style="-fx-font-size: 13px; -fx-font-weight: bold; -fx-text-fill: #58321B;" text="Admin" />
+                                    <Label fx:id="adminRoleLabel" style="-fx-font-size: 11px; -fx-text-fill: #9B7967;" text="Administrator" />
+                                 </children>
+                              </VBox>
+                              <ImageView fx:id="dropdownIcon" fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="formContent" alignment="TOP_LEFT" spacing="14.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <VBox fx:id="leftColumn" prefWidth="610.0">
+                           <children>
+                              <VBox fx:id="addEquipmentFormCard" prefWidth="610.0" spacing="14.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 16; -fx-padding: 18;" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <Label fx:id="formTitle" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #58321B;" text="Form Tambah Peralatan" />
+                                    <Separator fx:id="formTitleSeparator" />
+                                    <GridPane fx:id="formFields" hgap="14.0" vgap="12.0">
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="50" />
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="50" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints vgrow="NEVER" />
+                                          <RowConstraints vgrow="NEVER" />
+                                          <RowConstraints vgrow="NEVER" />
+                                          <RowConstraints vgrow="NEVER" />
+                                       </rowConstraints>
+                                       <children>
+                                          <VBox fx:id="equipmentNameCell" spacing="5.0" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                                             <children>
+                                                <Label fx:id="equipmentNameLabel" style="-fx-font-size: 13px; -fx-font-weight: bold; -fx-text-fill: #58321B;" text="Nama Peralatan *" />
+                                                <TextField fx:id="equipmentNameField" prefHeight="38.0" promptText="Contoh: Raket Yonex Astrox 88D" style="-fx-background-color: #FFFCFA; -fx-background-radius: 12; -fx-border-color: #EADBD2; -fx-border-radius: 12; -fx-font-size: 13px; -fx-text-fill: #58321B; -fx-prompt-text-fill: #B9A59B; -fx-padding: 0 12 0 12;" />
+                                             </children>
+                                          </VBox>
+                                          <VBox fx:id="equipmentTypeCell" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                                             <children>
+                                                <Label fx:id="equipmentTypeLabel" style="-fx-font-size: 13px; -fx-font-weight: bold; -fx-text-fill: #58321B;" text="Jenis Peralatan *" />
+                                                <ComboBox fx:id="equipmentTypeComboBox" maxWidth="1.7976931348623157E308" prefHeight="38.0" promptText="Pilih jenis" style="-fx-background-color: #FFFFFF; -fx-background-radius: 12; -fx-border-color: #EADBD2; -fx-border-radius: 12; -fx-font-size: 13px; -fx-padding: 0 4 0 4;">
+                                                   <items>
+                                                      <FXCollections fx:factory="observableArrayList">
+                                                         <String fx:value="Raket" />
+                                                         <String fx:value="Shuttlecock" />
+                                                         <String fx:value="Net" />
+                                                         <String fx:value="Aksesori" />
+                                                         <String fx:value="Lainnya" />
+                                                      </FXCollections>
+                                                   </items>
+                                                </ComboBox>
+                                             </children>
+                                          </VBox>
+                                          <VBox fx:id="equipmentQuantityCell" spacing="5.0" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                                             <children>
+                                                <Label fx:id="equipmentQuantityLabel" style="-fx-font-size: 13px; -fx-font-weight: bold; -fx-text-fill: #58321B;" text="Jumlah *" />
+                                                <TextField fx:id="equipmentQuantityField" prefHeight="38.0" style="-fx-background-color: #FFFCFA; -fx-background-radius: 12; -fx-border-color: #EADBD2; -fx-border-radius: 12; -fx-font-size: 13px; -fx-text-fill: #58321B; -fx-prompt-text-fill: #B9A59B; -fx-padding: 0 12 0 12;" text="0" />
+                                             </children>
+                                          </VBox>
+                                          <VBox fx:id="equipmentConditionCell" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                             <children>
+                                                <Label fx:id="equipmentConditionLabel" style="-fx-font-size: 13px; -fx-font-weight: bold; -fx-text-fill: #58321B;" text="Kondisi *" />
+                                                <ComboBox fx:id="equipmentConditionComboBox" maxWidth="1.7976931348623157E308" prefHeight="38.0" promptText="Pilih kondisi" style="-fx-background-color: #FFFFFF; -fx-background-radius: 12; -fx-border-color: #EADBD2; -fx-border-radius: 12; -fx-font-size: 13px; -fx-padding: 0 4 0 4;">
+                                                   <items>
+                                                      <FXCollections fx:factory="observableArrayList">
+                                                         <String fx:value="Baik" />
+                                                         <String fx:value="Rusak" />
+                                                         <String fx:value="Perlu Perbaikan" />
+                                                      </FXCollections>
+                                                   </items>
+                                                </ComboBox>
+                                             </children>
+                                          </VBox>
+                                          <VBox fx:id="equipmentStatusCell" spacing="5.0" GridPane.columnIndex="0" GridPane.rowIndex="2">
+                                             <children>
+                                                <Label fx:id="equipmentStatusLabel" style="-fx-font-size: 13px; -fx-font-weight: bold; -fx-text-fill: #58321B;" text="Status *" />
+                                                <ComboBox fx:id="equipmentStatusComboBox" maxWidth="1.7976931348623157E308" prefHeight="38.0" promptText="Pilih status" style="-fx-background-color: #FFFFFF; -fx-background-radius: 12; -fx-border-color: #EADBD2; -fx-border-radius: 12; -fx-font-size: 13px; -fx-padding: 0 4 0 4;">
+                                                   <items>
+                                                      <FXCollections fx:factory="observableArrayList">
+                                                         <String fx:value="Tersedia" />
+                                                         <String fx:value="Terpakai" />
+                                                         <String fx:value="Perawatan" />
+                                                      </FXCollections>
+                                                   </items>
+                                                </ComboBox>
+                                             </children>
+                                          </VBox>
+                                          <VBox fx:id="equipmentRentalPriceCell" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                             <children>
+                                                <Label fx:id="equipmentRentalPriceLabel" style="-fx-font-size: 13px; -fx-font-weight: bold; -fx-text-fill: #58321B;" text="Harga Sewa (Opsional)" />
+                                                <TextField fx:id="equipmentRentalPriceField" prefHeight="38.0" promptText="Contoh: 25000" style="-fx-background-color: #FFFCFA; -fx-background-radius: 12; -fx-border-color: #EADBD2; -fx-border-radius: 12; -fx-font-size: 13px; -fx-text-fill: #58321B; -fx-prompt-text-fill: #B9A59B; -fx-padding: 0 12 0 12;" />
+                                             </children>
+                                          </VBox>
+                                          <VBox fx:id="equipmentDescriptionCell" spacing="5.0" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="3">
+                                             <children>
+                                                <Label fx:id="equipmentDescriptionLabel" style="-fx-font-size: 13px; -fx-font-weight: bold; -fx-text-fill: #58321B;" text="Deskripsi" />
+                                                <TextArea fx:id="equipmentDescriptionField" prefHeight="75.0" promptText="Tuliskan deskripsi singkat mengenai peralatan..." style="-fx-control-inner-background: #FFFCFA; -fx-background-color: #EADBD2, #FFFCFA; -fx-background-insets: 0, 1; -fx-background-radius: 12, 11; -fx-font-size: 13px; -fx-text-fill: #58321B; -fx-prompt-text-fill: #B9A59B; -fx-padding: 6;" wrapText="true" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </GridPane>
+                                    <Region fx:id="formSpacer" VBox.vgrow="ALWAYS" />
+                                    <HBox fx:id="formActions" alignment="CENTER_RIGHT" spacing="12.0">
+                                       <children>
+                                          <Button fx:id="cancelButton" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 20; -fx-border-color: #FF7721; -fx-border-radius: 20; -fx-border-width: 1.5; -fx-text-fill: #58321B; -fx-font-size: 13px; -fx-font-weight: bold;" text="Batal" />
+                                          <Button fx:id="saveEquipmentButton" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #EF5C00; -fx-background-radius: 20; -fx-text-fill: #FFFFFF; -fx-font-size: 13px; -fx-font-weight: bold;" text="Simpan Peralatan" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                        <VBox fx:id="rightColumn" prefWidth="370.0" spacing="14.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <VBox fx:id="equipmentPhotoCard" spacing="10.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 16; -fx-padding: 16;">
+                                 <children>
+                                    <Label fx:id="photoTitle" style="-fx-font-size: 17px; -fx-font-weight: bold; -fx-text-fill: #58321B;" text="Foto Peralatan" />
+                                    <StackPane fx:id="photoDropZone" prefHeight="150.0" style="-fx-background-color: #FFFCFA; -fx-background-radius: 14; -fx-border-color: #FAC5A5; -fx-border-radius: 14; -fx-border-style: dashed; -fx-border-width: 1.5;">
+                                       <children>
+                                          <VBox fx:id="photoDropZoneContent" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" spacing="8.0">
+                                             <children>
+                                                <Label fx:id="photoDropTitle" style="-fx-font-size: 15px; -fx-font-weight: bold; -fx-text-fill: #58321B;" text="Unggah Foto Peralatan" />
+                                                <Label fx:id="photoDropDescription" maxWidth="260.0" style="-fx-font-size: 12px; -fx-text-fill: #805B47;" text="Drag &amp; drop file di sini, atau klik untuk memilih" textAlignment="CENTER" wrapText="true" />
+                                                <Label fx:id="photoFormatLabel" style="-fx-background-color: #FFF0E5; -fx-background-radius: 14; -fx-font-size: 11px; -fx-text-fill: #913601; -fx-padding: 4 12 4 12;" text="Format: JPG, JPEG, PNG | Maks. 5 MB" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </StackPane>
+                                 </children>
+                              </VBox>
+                              <VBox fx:id="equipmentInformationCard" spacing="10.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 16; -fx-padding: 16;" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <Label fx:id="equipmentInformationTitle" style="-fx-font-size: 17px; -fx-font-weight: bold; -fx-text-fill: #58321B;" text="Informasi Pengisian" />
+                                    <VBox fx:id="informationContent" spacing="8.0" style="-fx-background-color: #FFF0E5; -fx-background-radius: 14; -fx-padding: 14;">
+                                       <children>
+                                          <HBox fx:id="informationItem1" alignment="TOP_LEFT" spacing="6.0">
+                                             <children>
+                                                <Label fx:id="informationBullet1" style="-fx-font-size: 12px; -fx-text-fill: #805B47;" text="•" />
+                                                <Label fx:id="informationText1" maxWidth="1.7976931348623157E308" style="-fx-font-size: 12px; -fx-text-fill: #805B47;" text="Nama peralatan: masukkan nama yang jelas dan mudah dikenali." wrapText="true" HBox.hgrow="ALWAYS" />
+                                             </children>
+                                          </HBox>
+                                          <HBox fx:id="informationItem2" alignment="TOP_LEFT" spacing="6.0">
+                                             <children>
+                                                <Label fx:id="informationBullet2" style="-fx-font-size: 12px; -fx-text-fill: #805B47;" text="•" />
+                                                <Label fx:id="informationText2" maxWidth="1.7976931348623157E308" style="-fx-font-size: 12px; -fx-text-fill: #805B47;" text="Jenis peralatan: pilih kategori peralatan." wrapText="true" HBox.hgrow="ALWAYS" />
+                                             </children>
+                                          </HBox>
+                                          <HBox fx:id="informationItem3" alignment="TOP_LEFT" spacing="6.0">
+                                             <children>
+                                                <Label fx:id="informationBullet3" style="-fx-font-size: 12px; -fx-text-fill: #805B47;" text="•" />
+                                                <Label fx:id="informationText3" maxWidth="1.7976931348623157E308" style="-fx-font-size: 12px; -fx-text-fill: #805B47;" text="Jumlah: masukkan jumlah unit yang tersedia." wrapText="true" HBox.hgrow="ALWAYS" />
+                                             </children>
+                                          </HBox>
+                                          <HBox fx:id="informationItem4" alignment="TOP_LEFT" spacing="6.0">
+                                             <children>
+                                                <Label fx:id="informationBullet4" style="-fx-font-size: 12px; -fx-text-fill: #805B47;" text="•" />
+                                                <Label fx:id="informationText4" maxWidth="1.7976931348623157E308" style="-fx-font-size: 12px; -fx-text-fill: #805B47;" text="Kondisi: pilih kondisi fisik peralatan." wrapText="true" HBox.hgrow="ALWAYS" />
+                                             </children>
+                                          </HBox>
+                                          <HBox fx:id="informationItem5" alignment="TOP_LEFT" spacing="6.0">
+                                             <children>
+                                                <Label fx:id="informationBullet5" style="-fx-font-size: 12px; -fx-text-fill: #805B47;" text="•" />
+                                                <Label fx:id="informationText5" maxWidth="1.7976931348623157E308" style="-fx-font-size: 12px; -fx-text-fill: #805B47;" text="Status: tentukan ketersediaan operasional." wrapText="true" HBox.hgrow="ALWAYS" />
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
