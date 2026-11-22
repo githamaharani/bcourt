@@ -1,0 +1,85 @@
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/13"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.bcourt.controller.JadwalKasirController"
+            prefWidth="1100" prefHeight="700"
+            style="-fx-background-color: #F7F5F2;">
+
+    <top>
+        <VBox spacing="12" style="-fx-background-color: white;">
+            <padding>
+                <Insets top="20" right="25" bottom="20" left="25"/>
+            </padding>
+
+            <HBox alignment="CENTER_LEFT" spacing="15">
+                <Button text="← Kembali"
+                        onAction="#backToDashboard"
+                        style="-fx-background-color: #F1E8E2;
+                               -fx-text-fill: #542A16;
+                               -fx-background-radius: 8;
+                               -fx-padding: 10 16;"/>
+
+                <Label text="Jadwal Lapangan"
+                       style="-fx-font-size: 23px;
+                              -fx-font-weight: bold;
+                              -fx-text-fill: #542A16;"/>
+            </HBox>
+
+            <Label text="Kelola dan pantau jadwal penyewaan lapangan."
+                   style="-fx-font-size: 13px; -fx-text-fill: #777777;"/>
+        </VBox>
+    </top>
+
+    <center>
+        <VBox spacing="18">
+            <padding>
+                <Insets top="25" right="25" bottom="25" left="25"/>
+            </padding>
+
+            <HBox spacing="15">
+                <VBox spacing="6" HBox.hgrow="ALWAYS"
+                      style="-fx-background-color: white; -fx-background-radius: 12;">
+                    <padding>
+                        <Insets top="18" right="18" bottom="18" left="18"/>
+                    </padding>
+                    <Label text="Total Jadwal" style="-fx-text-fill: #777777;"/>
+                    <Label fx:id="totalScheduleLabel" text="0 Jadwal"
+                           style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #542A16;"/>
+                </VBox>
+
+                <VBox spacing="6" HBox.hgrow="ALWAYS"
+                      style="-fx-background-color: white; -fx-background-radius: 12;">
+                    <padding>
+                        <Insets top="18" right="18" bottom="18" left="18"/>
+                    </padding>
+                    <Label text="Menunggu Pembayaran" style="-fx-text-fill: #777777;"/>
+                    <Label fx:id="pendingScheduleLabel" text="0 Jadwal"
+                           style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #D18B25;"/>
+                </VBox>
+            </HBox>
+
+            <Label text="Daftar Jadwal Penyewaan"
+                   style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #542A16;"/>
+
+            <TableView fx:id="scheduleTable" VBox.vgrow="ALWAYS">
+                <columns>
+                    <TableColumn fx:id="codeColumn" text="Kode Transaksi" prefWidth="150"/>
+                    <TableColumn fx:id="customerColumn" text="Pelanggan" prefWidth="170"/>
+                    <TableColumn fx:id="courtColumn" text="Lapangan" prefWidth="130"/>
+                    <TableColumn fx:id="dateColumn" text="Tanggal" prefWidth="130"/>
+                    <TableColumn fx:id="timeColumn" text="Jam" prefWidth="150"/>
+                    <TableColumn fx:id="statusColumn" text="Status" prefWidth="120"/>
+                </columns>
+            </TableView>
+
+            <Label fx:id="feedbackLabel"
+                   text="Informasi jadwal akan ditampilkan di sini."
+                   style="-fx-text-fill: #777777;"/>
+        </VBox>
+    </center>
+
+</BorderPane>

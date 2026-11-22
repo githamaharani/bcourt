@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<ScrollPane xmlns="http://javafx.com/javafx/13"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.bcourt.controller.StrukKasirController"
+            fitToWidth="true"
+            fitToHeight="false"
+            pannable="true"
+            hbarPolicy="NEVER"
+            style="-fx-background-color: #F7F5F2;">
+
+    <content>
+
+        <VBox alignment="TOP_CENTER"
+              spacing="20"
+              prefWidth="900"
+              style="-fx-background-color: #F7F5F2;">
+
+            <padding>
+                <Insets top="30" right="25" bottom="30" left="25"/>
+            </padding>
+
+            <!-- Judul halaman -->
+            <VBox alignment="CENTER" spacing="5">
+                <Label text="STRUK PEMBAYARAN"
+                       style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #63351E;"/>
+
+                <Label text="B-COURT Badminton"
+                       style="-fx-font-size: 14px; -fx-text-fill: #777777;"/>
+            </VBox>
+
+            <!-- Kartu struk yang akan dicetak -->
+            <VBox fx:id="receiptBox"
+                  maxWidth="600"
+                  spacing="18"
+                  style="-fx-background-color: white; -fx-background-radius: 15; -fx-border-color: #E5DDD6; -fx-border-radius: 15;">
+
+                <padding>
+                    <Insets top="30" right="35" bottom="30" left="35"/>
+                </padding>
+
+                <!-- Header -->
+                <VBox alignment="CENTER" spacing="6">
+                    <Label text="B-COURT"
+                           style="-fx-font-size: 27px; -fx-font-weight: bold; -fx-text-fill: #F45B00;"/>
+
+                    <Label text="BUKTI TRANSAKSI PENYEWAAN LAPANGAN"
+                           style="-fx-font-size: 12px; -fx-text-fill: #777777;"/>
+                </VBox>
+
+                <Region prefHeight="5"/>
+
+                <!-- Informasi transaksi -->
+                <Label text="INFORMASI TRANSAKSI"
+                       style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #63351E;"/>
+
+                <HBox alignment="CENTER_LEFT" spacing="10">
+                    <Label text="Kode Transaksi" prefWidth="160"
+                           style="-fx-text-fill: #777777;"/>
+                    <Label fx:id="codeLabel" text="-"
+                           style="-fx-font-weight: bold; -fx-text-fill: #333333;"/>
+                </HBox>
+
+                <HBox alignment="CENTER_LEFT" spacing="10">
+                    <Label text="Nama Pelanggan" prefWidth="160"
+                           style="-fx-text-fill: #777777;"/>
+                    <Label fx:id="customerLabel" text="-"
+                           style="-fx-text-fill: #333333;"/>
+                </HBox>
+
+                <HBox alignment="CENTER_LEFT" spacing="10">
+                    <Label text="Nomor WhatsApp" prefWidth="160"
+                           style="-fx-text-fill: #777777;"/>
+                    <Label fx:id="phoneLabel" text="-"
+                           style="-fx-text-fill: #333333;"/>
+                </HBox>
+
+                <HBox alignment="CENTER_LEFT" spacing="10">
+                    <Label text="Lapangan" prefWidth="160"
+                           style="-fx-text-fill: #777777;"/>
+                    <Label fx:id="courtLabel" text="-"
+                           style="-fx-text-fill: #333333;"/>
+                </HBox>
+
+                <HBox alignment="CENTER_LEFT" spacing="10">
+                    <Label text="Tanggal" prefWidth="160"
+                           style="-fx-text-fill: #777777;"/>
+                    <Label fx:id="dateLabel" text="-"
+                           style="-fx-text-fill: #333333;"/>
+                </HBox>
+
+                <HBox alignment="CENTER_LEFT" spacing="10">
+                    <Label text="Waktu" prefWidth="160"
+                           style="-fx-text-fill: #777777;"/>
+                    <Label fx:id="timeLabel" text="-"
+                           style="-fx-text-fill: #333333;"/>
+                </HBox>
+
+                <Region prefHeight="5"/>
+
+                <!-- Rincian pembayaran -->
+                <Label text="RINCIAN PEMBAYARAN"
+                       style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #63351E;"/>
+
+                <HBox alignment="CENTER_LEFT" spacing="10">
+                    <Label text="Biaya Lapangan" prefWidth="160"
+                           style="-fx-text-fill: #777777;"/>
+                    <Label fx:id="courtCostLabel" text="Rp0"
+                           style="-fx-text-fill: #333333;"/>
+                </HBox>
+
+                <HBox alignment="CENTER_LEFT" spacing="10">
+                    <Label text="Biaya Peralatan" prefWidth="160"
+                           style="-fx-text-fill: #777777;"/>
+                    <Label fx:id="equipmentCostLabel" text="Rp0"
+                           style="-fx-text-fill: #333333;"/>
+                </HBox>
+
+                <Region prefHeight="5"/>
+
+                <!-- Total -->
+                <HBox alignment="CENTER_LEFT" spacing="10"
+                      style="-fx-background-color: #FFF3EA; -fx-background-radius: 8;">
+
+                    <padding>
+                        <Insets top="12" right="12" bottom="12" left="12"/>
+                    </padding>
+
+                    <Label text="TOTAL PEMBAYARAN"
+                           style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #63351E;"/>
+
+                    <Region HBox.hgrow="ALWAYS"/>
+
+                    <Label fx:id="totalCostLabel" text="Rp0"
+                           style="-fx-font-size: 17px; -fx-font-weight: bold; -fx-text-fill: #F45B00;"/>
+                </HBox>
+
+                <Region prefHeight="5"/>
+
+                <!-- Status transaksi -->
+                <Label text="STATUS TRANSAKSI"
+                       style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #63351E;"/>
+
+                <HBox alignment="CENTER_LEFT" spacing="10">
+                    <Label text="Metode Pembayaran" prefWidth="160"
+                           style="-fx-text-fill: #777777;"/>
+                    <Label fx:id="methodLabel" text="-"
+                           style="-fx-text-fill: #333333;"/>
+                </HBox>
+
+                <HBox alignment="CENTER_LEFT" spacing="10">
+                    <Label text="Status" prefWidth="160"
+                           style="-fx-text-fill: #777777;"/>
+                    <Label fx:id="statusLabel" text="-"
+                           style="-fx-font-weight: bold; -fx-text-fill: #F45B00;"/>
+                </HBox>
+
+                <Region prefHeight="10"/>
+
+                <!-- Pesan penutup -->
+                <VBox alignment="CENTER" spacing="5">
+                    <Label text="Terima kasih telah menggunakan layanan B-COURT!"
+                           wrapText="true"
+                           style="-fx-font-size: 12px; -fx-text-fill: #777777;"/>
+
+                    <Label text="Simpan struk ini sebagai bukti transaksi."
+                           style="-fx-font-size: 11px; -fx-text-fill: #999999;"/>
+                </VBox>
+
+            </VBox>
+
+            <!-- Tombol di luar kartu struk -->
+            <HBox alignment="CENTER" spacing="15">
+
+                <Button text="Cetak Struk"
+                        onAction="#printReceipt"
+                        prefWidth="150"
+                        prefHeight="42"
+                        style="-fx-background-color: #F45B00; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 8; -fx-cursor: hand;"/>
+
+                <Button text="Kembali ke Dashboard"
+                        onAction="#backToDashboard"
+                        prefWidth="190"
+                        prefHeight="42"
+                        style="-fx-background-color: #F1E7E1; -fx-text-fill: #63351E; -fx-font-weight: bold; -fx-background-radius: 8; -fx-cursor: hand;"/>
+
+            </HBox>
+
+        </VBox>
+
+    </content>
+
+</ScrollPane>
