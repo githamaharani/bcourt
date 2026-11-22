@@ -13,156 +13,288 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<StackPane prefHeight="680.0" prefWidth="1050.0" style="-fx-background-color: #3B2314;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
-   <children>
-      <!-- Kartu Utama -->
-      <HBox maxHeight="600.0" maxWidth="900.0" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 20;">
-         <children>
-            <!-- PANEL KIRI: Branding & Ilustrasi -->
-            <VBox prefHeight="600.0" prefWidth="420.0" spacing="18.0" style="-fx-background-color: #F6E6DC; -fx-background-radius: 20 0 0 20;">
-               <padding>
-                  <Insets bottom="36.0" left="36.0" right="36.0" top="36.0" />
-               </padding>
-               <children>
-                  <!-- NOTE FOTO 1: Isi gambar logo B-Court di Scene Builder (Properties -> Image) -->
-                  <ImageView fx:id="imgLogo" fitWidth="210.0" pickOnBounds="true" preserveRatio="true" />
+<StackPane prefHeight="680.0"
+           prefWidth="1050.0"
+           style="-fx-background-color: #3B2314;"
+           xmlns="http://javafx.com/javafx/21"
+           xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="com.bcourt.controller.RegisterController">
 
-                  <Region maxWidth="48.0" minHeight="4.0" prefHeight="4.0" style="-fx-background-color: #EA580C; -fx-background-radius: 2;" />
+    <children>
 
-                  <Label text="Create Your
-B-Court Account" textFill="#2B1810">
-                     <font>
-                        <Font name="System Bold" size="28.0" />
-                     </font>
-                  </Label>
+        <HBox maxHeight="600.0"
+              maxWidth="900.0"
+              prefHeight="600.0"
+              prefWidth="900.0"
+              style="-fx-background-color: #FFFFFF; -fx-background-radius: 20;">
 
-                  <Label text="Daftar sekarang untuk memesan jadwal lapangan badminton dengan cepat dan teratur." textFill="#6E574B" wrapText="true">
-                     <font>
-                        <Font size="13.5" />
-                     </font>
-                  </Label>
+            <children>
 
-                  <Region VBox.vgrow="ALWAYS" />
+                <!-- PANEL KIRI -->
+                <VBox prefHeight="600.0"
+                      prefWidth="420.0"
+                      spacing="18.0"
+                      style="-fx-background-color: #F6E6DC; -fx-background-radius: 20 0 0 20;">
 
-                  <!-- NOTE FOTO 2: Isi gambar ilustrasi raket/shuttlecock di bagian bawah panel kiri -->
-                  <HBox alignment="CENTER">
-                     <children>
-                        <ImageView fx:id="imgIllustration" fitWidth="280.0" pickOnBounds="true" preserveRatio="true" />
-                     </children>
-                  </HBox>
-               </children>
-            </VBox>
+                    <padding>
+                        <Insets bottom="36.0" left="36.0"
+                                right="36.0" top="36.0"/>
+                    </padding>
 
-            <!-- PANEL KANAN: Form Register -->
-            <VBox alignment="CENTER_LEFT" prefHeight="600.0" prefWidth="480.0" spacing="13.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 0 20 20 0;">
-               <padding>
-                  <Insets bottom="32.0" left="44.0" right="44.0" top="32.0" />
-               </padding>
-               <children>
-                  <VBox spacing="4.0">
-                     <children>
-                        <Label text="Buat Akun Baru" textFill="#2B1810">
-                           <font>
-                              <Font name="System Bold" size="24.0" />
-                           </font>
+                    <children>
+
+                        <ImageView fx:id="imgLogo"
+                                   fitWidth="210.0"
+                                   pickOnBounds="true"
+                                   preserveRatio="true"/>
+
+                        <Region maxWidth="48.0"
+                                minHeight="4.0"
+                                prefHeight="4.0"
+                                style="-fx-background-color: #EA580C; -fx-background-radius: 2;"/>
+
+                        <Label text="Create Your&#10;B-Court Account"
+                               textFill="#2B1810"
+                               wrapText="true">
+                            <font>
+                                <Font name="System Bold" size="28.0"/>
+                            </font>
                         </Label>
-                        <Label text="Lengkapi data berikut untuk membuat akun." textFill="#7A6A60">
-                           <font>
-                              <Font size="13.0" />
-                           </font>
+
+                        <Label text="Daftar sekarang untuk memesan jadwal lapangan badminton dengan cepat dan teratur."
+                               textFill="#6E574B"
+                               wrapText="true">
+                            <font>
+                                <Font size="13.5"/>
+                            </font>
                         </Label>
-                     </children>
-                  </VBox>
 
-                  <Region prefHeight="3.0" prefWidth="392.0" style="-fx-background-color: #EA580C; -fx-background-radius: 2;" />
+                        <Region VBox.vgrow="ALWAYS"/>
 
-                  <!-- Nama Lengkap -->
-                  <VBox spacing="5.0">
-                     <children>
-                        <Label text="Nama Lengkap" textFill="#3B2314">
-                           <font>
-                              <Font name="System Bold" size="12.5" />
-                           </font>
-                        </Label>
-                        <TextField fx:id="txtFullName" prefHeight="38.0" promptText="Masukkan nama lengkap" style="-fx-background-color: #F4ECE6; -fx-background-radius: 10; -fx-border-color: #E2D5CC; -fx-border-radius: 10; -fx-padding: 0 14 0 14; -fx-font-size: 13px;" />
-                     </children>
-                  </VBox>
+                        <HBox alignment="CENTER">
+                            <children>
+                                <ImageView fx:id="imgIllustration"
+                                           fitWidth="280.0"
+                                           pickOnBounds="true"
+                                           preserveRatio="true"/>
+                            </children>
+                        </HBox>
 
-                  <!-- Username & Nomor HP sejajar -->
-                  <HBox spacing="12.0">
-                     <children>
-                        <VBox spacing="5.0" HBox.hgrow="ALWAYS">
-                           <children>
-                              <Label text="Username" textFill="#3B2314">
-                                 <font>
-                                    <Font name="System Bold" size="12.5" />
-                                 </font>
-                              </Label>
-                              <TextField fx:id="txtUsername" prefHeight="38.0" promptText="Username" style="-fx-background-color: #F4ECE6; -fx-background-radius: 10; -fx-border-color: #E2D5CC; -fx-border-radius: 10; -fx-padding: 0 14 0 14; -fx-font-size: 13px;" />
-                           </children>
+                    </children>
+                </VBox>
+
+                <!-- PANEL KANAN -->
+                <VBox alignment="CENTER_LEFT"
+                      prefHeight="600.0"
+                      prefWidth="480.0"
+                      spacing="13.0"
+                      style="-fx-background-color: #FFFFFF; -fx-background-radius: 0 20 20 0;">
+
+                    <padding>
+                        <Insets bottom="32.0" left="44.0"
+                                right="44.0" top="32.0"/>
+                    </padding>
+
+                    <children>
+
+                        <VBox spacing="4.0">
+                            <children>
+
+                                <Label text="Buat Akun Baru"
+                                       textFill="#2B1810">
+                                    <font>
+                                        <Font name="System Bold" size="24.0"/>
+                                    </font>
+                                </Label>
+
+                                <Label text="Lengkapi data berikut untuk membuat akun."
+                                       textFill="#7A6A60">
+                                    <font>
+                                        <Font size="13.0"/>
+                                    </font>
+                                </Label>
+
+                            </children>
                         </VBox>
-                        <VBox spacing="5.0" HBox.hgrow="ALWAYS">
-                           <children>
-                              <Label text="No. Handphone" textFill="#3B2314">
-                                 <font>
-                                    <Font name="System Bold" size="12.5" />
-                                 </font>
-                              </Label>
-                              <TextField fx:id="txtPhone" prefHeight="38.0" promptText="08xxxxxxxxxx" style="-fx-background-color: #F4ECE6; -fx-background-radius: 10; -fx-border-color: #E2D5CC; -fx-border-radius: 10; -fx-padding: 0 14 0 14; -fx-font-size: 13px;" />
-                           </children>
+
+                        <Region prefHeight="3.0"
+                                prefWidth="392.0"
+                                style="-fx-background-color: #EA580C; -fx-background-radius: 2;"/>
+
+                        <!-- NAMA LENGKAP -->
+                        <VBox spacing="5.0">
+                            <children>
+
+                                <Label text="Nama Lengkap"
+                                       textFill="#3B2314">
+                                    <font>
+                                        <Font name="System Bold" size="12.5"/>
+                                    </font>
+                                </Label>
+
+                                <TextField fx:id="txtFullName"
+                                           prefHeight="38.0"
+                                           promptText="Masukkan nama lengkap"
+                                           style="-fx-background-color: #F4ECE6;
+                                                  -fx-background-radius: 10;
+                                                  -fx-border-color: #E2D5CC;
+                                                  -fx-border-radius: 10;
+                                                  -fx-padding: 0 14 0 14;
+                                                  -fx-font-size: 13px;"/>
+
+                            </children>
                         </VBox>
-                     </children>
-                  </HBox>
 
-                  <!-- Password -->
-                  <VBox spacing="5.0">
-                     <children>
-                        <Label text="Password" textFill="#3B2314">
-                           <font>
-                              <Font name="System Bold" size="12.5" />
-                           </font>
-                        </Label>
-                        <PasswordField fx:id="pwdPassword" prefHeight="38.0" promptText="Buat password" style="-fx-background-color: #F4ECE6; -fx-background-radius: 10; -fx-border-color: #E2D5CC; -fx-border-radius: 10; -fx-padding: 0 14 0 14; -fx-font-size: 13px;" />
-                     </children>
-                  </VBox>
+                        <!-- USERNAME DAN NOMOR HP -->
+                        <HBox spacing="12.0">
+                            <children>
 
-                  <!-- Konfirmasi Password -->
-                  <VBox spacing="5.0">
-                     <children>
-                        <Label text="Konfirmasi Password" textFill="#3B2314">
-                           <font>
-                              <Font name="System Bold" size="12.5" />
-                           </font>
-                        </Label>
-                        <PasswordField fx:id="pwdConfirmPassword" prefHeight="38.0" promptText="Ulangi password" style="-fx-background-color: #F4ECE6; -fx-background-radius: 10; -fx-border-color: #E2D5CC; -fx-border-radius: 10; -fx-padding: 0 14 0 14; -fx-font-size: 13px;" />
-                     </children>
-                  </VBox>
+                                <VBox spacing="5.0" HBox.hgrow="ALWAYS">
+                                    <children>
 
-                  <!-- Tombol Register -->
-                  <Button fx:id="btnRegister" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="42.0" style="-fx-background-color: #EA580C; -fx-text-fill: #FFFFFF; -fx-font-weight: bold; -fx-font-size: 14px; -fx-background-radius: 10; -fx-cursor: hand;" text="Create Account">
-                     <VBox.margin>
-                        <Insets top="4.0" />
-                     </VBox.margin>
-                  </Button>
+                                        <Label text="Username"
+                                               textFill="#3B2314">
+                                            <font>
+                                                <Font name="System Bold" size="12.5"/>
+                                            </font>
+                                        </Label>
 
-                  <!-- Link kembali ke Login -->
-                  <HBox alignment="CENTER" spacing="4.0">
-                     <children>
-                        <Label text="Already have an account?" textFill="#6E574B">
-                           <font>
-                              <Font size="13.0" />
-                           </font>
-                        </Label>
-                        <Hyperlink fx:id="lnkLogin" style="-fx-text-fill: #EA580C; -fx-underline: false;" text="Sign In">
-                           <font>
-                              <Font name="System Bold" size="13.0" />
-                           </font>
-                        </Hyperlink>
-                     </children>
-                  </HBox>
-               </children>
-            </VBox>
-         </children>
-      </HBox>
-   </children>
+                                        <TextField fx:id="txtUsername"
+                                                   prefHeight="38.0"
+                                                   promptText="Username"
+                                                   style="-fx-background-color: #F4ECE6;
+                                                          -fx-background-radius: 10;
+                                                          -fx-border-color: #E2D5CC;
+                                                          -fx-border-radius: 10;
+                                                          -fx-padding: 0 14 0 14;
+                                                          -fx-font-size: 13px;"/>
+
+                                    </children>
+                                </VBox>
+
+                                <VBox spacing="5.0" HBox.hgrow="ALWAYS">
+                                    <children>
+
+                                        <Label text="No. Handphone"
+                                               textFill="#3B2314">
+                                            <font>
+                                                <Font name="System Bold" size="12.5"/>
+                                            </font>
+                                        </Label>
+
+                                        <TextField fx:id="txtPhone"
+                                                   prefHeight="38.0"
+                                                   promptText="08xxxxxxxxxx"
+                                                   style="-fx-background-color: #F4ECE6;
+                                                          -fx-background-radius: 10;
+                                                          -fx-border-color: #E2D5CC;
+                                                          -fx-border-radius: 10;
+                                                          -fx-padding: 0 14 0 14;
+                                                          -fx-font-size: 13px;"/>
+
+                                    </children>
+                                </VBox>
+
+                            </children>
+                        </HBox>
+
+                        <!-- PASSWORD -->
+                        <VBox spacing="5.0">
+                            <children>
+
+                                <Label text="Password"
+                                       textFill="#3B2314">
+                                    <font>
+                                        <Font name="System Bold" size="12.5"/>
+                                    </font>
+                                </Label>
+
+                                <PasswordField fx:id="pwdPassword"
+                                               prefHeight="38.0"
+                                               promptText="Buat password"
+                                               style="-fx-background-color: #F4ECE6;
+                                                      -fx-background-radius: 10;
+                                                      -fx-border-color: #E2D5CC;
+                                                      -fx-border-radius: 10;
+                                                      -fx-padding: 0 14 0 14;
+                                                      -fx-font-size: 13px;"/>
+
+                            </children>
+                        </VBox>
+
+                        <!-- KONFIRMASI PASSWORD -->
+                        <VBox spacing="5.0">
+                            <children>
+
+                                <Label text="Konfirmasi Password"
+                                       textFill="#3B2314">
+                                    <font>
+                                        <Font name="System Bold" size="12.5"/>
+                                    </font>
+                                </Label>
+
+                                <PasswordField fx:id="pwdConfirmPassword"
+                                               prefHeight="38.0"
+                                               promptText="Ulangi password"
+                                               style="-fx-background-color: #F4ECE6;
+                                                      -fx-background-radius: 10;
+                                                      -fx-border-color: #E2D5CC;
+                                                      -fx-border-radius: 10;
+                                                      -fx-padding: 0 14 0 14;
+                                                      -fx-font-size: 13px;"/>
+
+                            </children>
+                        </VBox>
+
+                        <!-- TOMBOL REGISTER -->
+                        <Button fx:id="btnRegister"
+                                onAction="#handleRegister"
+                                maxWidth="1.7976931348623157E308"
+                                mnemonicParsing="false"
+                                prefHeight="42.0"
+                                text="Create Account"
+                                style="-fx-background-color: #EA580C;
+                                       -fx-text-fill: #FFFFFF;
+                                       -fx-font-weight: bold;
+                                       -fx-font-size: 14px;
+                                       -fx-background-radius: 10;
+                                       -fx-cursor: hand;">
+
+                            <VBox.margin>
+                                <Insets top="4.0"/>
+                            </VBox.margin>
+
+                        </Button>
+
+                        <!-- KEMBALI KE LOGIN -->
+                        <HBox alignment="CENTER" spacing="4.0">
+                            <children>
+
+                                <Label text="Already have an account?"
+                                       textFill="#6E574B">
+                                    <font>
+                                        <Font size="13.0"/>
+                                    </font>
+                                </Label>
+
+                                <Hyperlink fx:id="lnkLogin"
+                                           onAction="#handleLogin"
+                                           text="Sign In"
+                                           style="-fx-text-fill: #EA580C;
+                                                  -fx-underline: false;">
+                                    <font>
+                                        <Font name="System Bold" size="13.0"/>
+                                    </font>
+                                </Hyperlink>
+
+                            </children>
+                        </HBox>
+
+                    </children>
+                </VBox>
+
+            </children>
+        </HBox>
+
+    </children>
 </StackPane>

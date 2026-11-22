@@ -8,7 +8,8 @@ import java.util.Map;
 
 public class Sewa {
     private int idSewa;
-    private Admin admin;           
+    private Admin admin;
+    private Kasir kasir;
     private Pelanggan pelanggan;   
     private Lapangan lapangan;
     private LocalDate tanggalPemesanan;
@@ -55,6 +56,8 @@ public class Sewa {
     public void setIdSewa(int idSewa) { this.idSewa = idSewa; }
     public Admin getAdmin() { return admin; }
     public void setAdmin(Admin admin) { this.admin = admin; }
+    public Kasir getKasir() { return kasir; }
+    public void setKasir(Kasir kasir){ this.kasir = kasir; }
     public Pelanggan getPelanggan() { return pelanggan; }
     public void setPelanggan(Pelanggan pelanggan) { this.pelanggan = pelanggan; }
     public Lapangan getLapangan() { return lapangan; }

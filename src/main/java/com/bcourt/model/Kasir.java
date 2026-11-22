@@ -28,7 +28,7 @@ public class Kasir extends User {
         sewa.setJamSelesai(jamSelesai);
         sewa.setCatatan(catatan);
         sewa.setStatus("Dipesan");
-        sewa.hitungUlangTotal();
+        sewa.setTotalBiaya(sewa.totalBiaya());
         return sewa;
     }
 
