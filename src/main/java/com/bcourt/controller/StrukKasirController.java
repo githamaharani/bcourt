@@ -1,4 +1,3 @@
-
 package com.bcourt.controller;
 
 import java.io.IOException;
@@ -6,6 +5,7 @@ import java.text.NumberFormat;
 import java.util.Locale;
 
 import com.bcourt.App;
+import com.bcourt.dao.PembayaranDAO;
 import com.bcourt.model.Rental;
 
 import javafx.fxml.FXML;
@@ -27,7 +27,6 @@ public class StrukKasirController {
     @FXML private Label methodLabel;
     @FXML private Label statusLabel;
 
-    // Label rincian biaya
     @FXML private Label courtCostLabel;
     @FXML private Label equipmentCostLabel;
     @FXML private Label totalCostLabel;
@@ -35,8 +34,10 @@ public class StrukKasirController {
     private static Rental selectedRental;
     private static String selectedMethod;
 
+    private final PembayaranDAO pembayaranDAO = new PembayaranDAO();
+
     private final NumberFormat rupiah =
-        NumberFormat.getCurrencyInstance(new Locale("id", "ID"));
+            NumberFormat.getCurrencyInstance(new Locale("id", "ID"));
 
     public static void setTransactionData(Rental rental, String method) {
         selectedRental = rental;
@@ -55,37 +56,64 @@ public class StrukKasirController {
         customerLabel.setText(selectedRental.getCustomer());
         phoneLabel.setText(selectedRental.getPhone());
         courtLabel.setText(selectedRental.getCourt());
-        dateLabel.setText(selectedRental.getDate().toString());
+
+        dateLabel.setText(
+                selectedRental.getDate().toString()
+        );
 
         timeLabel.setText(
-            selectedRental.getStartTime() + " - " +
-            selectedRental.getEndTime()
+                selectedRental.getStartTime() + " - "
+                        + selectedRental.getEndTime()
         );
 
         methodLabel.setText(
-            selectedMethod != null ? selectedMethod : "-"
+                selectedMethod != null ? selectedMethod : "-"
         );
 
-        statusLabel.setText(selectedRental.getStatus());
+        String statusDatabase = getStatusDatabase();
+
+        if (statusDatabase != null) {
+            statusLabel.setText(statusDatabase);
+            selectedRental.setStatus(statusDatabase);
+        } else {
+            statusLabel.setText(selectedRental.getStatus());
+        }
 
         courtCostLabel.setText(
-            formatRupiah(selectedRental.getBiayaLapangan())
+                formatRupiah(selectedRental.getBiayaLapangan())
         );
 
         equipmentCostLabel.setText(
-            formatRupiah(selectedRental.getBiayaPeralatan())
+                formatRupiah(selectedRental.getBiayaPeralatan())
         );
 
         totalCostLabel.setText(
-            formatRupiah(selectedRental.getTotalBiaya())
+                formatRupiah(selectedRental.getTotalBiaya())
         );
+    }
+
+    private String getStatusDatabase() {
+
+        String code = selectedRental.getCode();
+
+        if (code == null || !code.startsWith("TRX-")) {
+            return null;
+        }
+
+        try {
+            int idSewa = Integer.parseInt(code.substring(4));
+
+            return pembayaranDAO.getStatusPembayaran(idSewa);
+
+        } catch (NumberFormatException e) {
+            return null;
+        }
     }
 
     private String formatRupiah(int amount) {
         return rupiah.format(amount).replace(",00", "");
     }
 
-    // Fungsi cetak struk
     @FXML
     private void printReceipt() {
 
@@ -102,7 +130,7 @@ public class StrukKasirController {
         }
 
         boolean proceed = job.showPrintDialog(
-            receiptBox.getScene().getWindow()
+                receiptBox.getScene().getWindow()
         );
 
         if (proceed) {
@@ -129,7 +157,6 @@ public class StrukKasirController {
         }
     }
 
-    // Fungsi kembali ke Dashboard Kasir
     @FXML
     private void backToDashboard() {
 
@@ -142,18 +169,24 @@ public class StrukKasirController {
     }
 
     private void showError(String message) {
+
         Alert alert = new Alert(Alert.AlertType.ERROR);
+
         alert.setTitle("Kesalahan");
         alert.setHeaderText("Terjadi Kesalahan");
         alert.setContentText(message);
+
         alert.showAndWait();
     }
 
     private void showInfo(String message) {
+
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
+
         alert.setTitle("Informasi");
         alert.setHeaderText(null);
         alert.setContentText(message);
+
         alert.showAndWait();
     }
 }
