@@ -6,22 +6,17 @@ import java.time.LocalTime;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-/**
- * TK1: id_sewa, admin, pelanggan, lapangan, tanggal_pemesanan, tanggal_main,
- * jam_mulai, jam_selesai, catatan, status, total_biaya.
- * Peralatan yang disewa disimpan sebagai pasangan (Peralatan -> jumlah); di database = tabel DetailPeralatan.
- */
 public class Sewa {
     private int idSewa;
-    private Admin admin;           // null sampai admin mengonfirmasi
-    private Pelanggan pelanggan;   // null jika transaksi oleh guest
+    private Admin admin;           
+    private Pelanggan pelanggan;   
     private Lapangan lapangan;
     private LocalDate tanggalPemesanan;
     private LocalDate tanggalMain;
     private LocalTime jamMulai;
     private LocalTime jamSelesai;
     private String catatan;
-    private String status;         // Dipesan / Berlangsung / Selesai / Dibatalkan
+    private String status;         
     private double totalBiaya;
     private final Map<Peralatan, Integer> daftarPeralatan = new LinkedHashMap<>();
 
@@ -32,7 +27,6 @@ public class Sewa {
         return (int) Math.max(0, Duration.between(jamMulai, jamSelesai).toHours());
     }
 
-    /** Menambah peralatan ke transaksi (opsional). Stok dikurangi di sini. */
     public void tambahPeralatan(Peralatan peralatan, int jumlah) {
         peralatan.kurangiStok(jumlah);
         daftarPeralatan.merge(peralatan, jumlah, Integer::sum);

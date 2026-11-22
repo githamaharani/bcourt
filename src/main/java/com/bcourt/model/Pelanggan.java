@@ -1,42 +1,29 @@
 package com.bcourt.model;
 
-import java.time.LocalDate;
-import java.time.LocalTime;
-
-/** PEWARISAN: Pelanggan mewarisi User. Method: tampilkanMenu, buatSewa, buatPembayaran, batalkanSewa. */
-public class Pelanggan extends User {
+/**
+ * Data pelanggan yang dilayani kasir. Pelanggan tidak login, jadi tidak lagi
+ * mewarisi User (aktor sistem hanya Admin dan Kasir).
+ */
+public class Pelanggan {
+    private int idPelanggan;
+    private String nama;
+    private String noHp;
 
     public Pelanggan() {}
 
-    public Pelanggan(int idUser, String nama, String username, String password, String noHp, String alamat) {
-        super(idUser, nama, username, password, noHp, alamat);
+    public Pelanggan(int idPelanggan, String nama, String noHp) {
+        this.idPelanggan = idPelanggan;
+        this.nama = nama;
+        this.noHp = noHp;
     }
+
+    public int getIdPelanggan() { return idPelanggan; }
+    public void setIdPelanggan(int idPelanggan) { this.idPelanggan = idPelanggan; }
+    public String getNama() { return nama; }
+    public void setNama(String nama) { this.nama = nama; }
+    public String getNoHp() { return noHp; }
+    public void setNoHp(String noHp) { this.noHp = noHp; }
 
     @Override
-    public String tampilkanMenu() {
-        return "Dashboard Pelanggan";   // TODO: sesuaikan dengan nama FXML dashboard pelanggan
-    }
-
-    public Sewa buatSewa(Lapangan lapangan, LocalDate tanggalMain, LocalTime jamMulai, LocalTime jamSelesai, String catatan) {
-        Sewa sewa = new Sewa();
-        sewa.setPelanggan(this);
-        sewa.setLapangan(lapangan);
-        sewa.setTanggalPemesanan(LocalDate.now());
-        sewa.setTanggalMain(tanggalMain);
-        sewa.setJamMulai(jamMulai);
-        sewa.setJamSelesai(jamSelesai);
-        sewa.setCatatan(catatan);
-        sewa.setStatus("Dipesan");
-        sewa.setTotalBiaya(sewa.totalBiaya());
-        return sewa;
-    }
-
-    /** POLIMORFISME: pembayaran bisa berupa QRIS atau Tunai. */
-    public boolean buatPembayaran(Pembayaran pembayaran) {
-        return pembayaran.prosesPembayaran();
-    }
-
-    public void batalkanSewa(Sewa sewa) {
-        sewa.setStatus("Dibatalkan");
-    }
+    public String toString() { return nama + " (" + noHp + ")"; }
 }

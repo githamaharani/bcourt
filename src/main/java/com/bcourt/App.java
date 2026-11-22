@@ -1,4 +1,3 @@
-
 package com.bcourt;
 
 import java.io.IOException;
@@ -13,84 +12,67 @@ import javafx.stage.Stage;
 public class App extends Application {
 
     private static Scene scene;
-
     private static Stage primaryStage;
 
-
-    // ==========================================
     // START APPLICATION
-    // ==========================================
-
     @Override
     public void start(Stage stage) throws IOException {
 
         primaryStage = stage;
 
-        // Membuka halaman Dashboard Admin
-        Parent root = loadFXML(
-            "/com/bcourt/admin/dashboard-admin.fxml"
-        );
+        // Halaman pertama adalah Login
+        Parent root = loadFXML("login");
 
         scene = new Scene(root);
 
         stage.setTitle("B-Court");
         stage.setScene(scene);
         stage.setResizable(false);
-
-        // Menyesuaikan ukuran jendela dengan halaman Login
         stage.sizeToScene();
-
         stage.show();
     }
 
-
-    // ==========================================
-    // SET ROOT / PINDAH HALAMAN
-    // ==========================================
-
+    // PINDAH HALAMAN
     public static void setRoot(String fxml) throws IOException {
 
         Parent root = loadFXML(fxml);
-
         scene.setRoot(root);
 
-        // Menyesuaikan ukuran jendela dengan halaman baru
         if (primaryStage != null) {
             primaryStage.sizeToScene();
         }
     }
 
-
-    // ==========================================
     // LOAD FXML
-    // ==========================================
-
     private static Parent loadFXML(String fxml) throws IOException {
 
-        URL fxmlLocation = App.class.getResource(fxml);
+        String filePath = fxml.endsWith(".fxml")
+                ? fxml
+                : fxml + ".fxml";
 
-        if (fxmlLocation == null) {
+        URL fxmlLocation;
 
-            throw new IOException(
-                "File FXML tidak ditemukan: " + fxml
+        if (filePath.startsWith("/")) {
+            fxmlLocation = App.class.getResource(filePath);
+        } else {
+            fxmlLocation = App.class.getResource(
+                "/com/bcourt/" + filePath
             );
         }
 
-        FXMLLoader fxmlLoader = new FXMLLoader(
-            fxmlLocation
-        );
+        if (fxmlLocation == null) {
+            throw new IOException(
+                "File FXML tidak ditemukan: " + filePath
+            );
+        }
 
-        return fxmlLoader.load();
+        FXMLLoader loader = new FXMLLoader(fxmlLocation);
+
+        return loader.load();
     }
 
-
-    // ==========================================
     // MAIN
-    // ==========================================
-
     public static void main(String[] args) {
-
         launch();
     }
-
 }

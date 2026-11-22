@@ -3,15 +3,21 @@ module com.bcourt {
     requires javafx.controls;
     requires javafx.fxml;
     requires java.sql;
-    requires com.google.zxing;
 
-    // Membuka package utama untuk JavaFX
+    // Package utama
     opens com.bcourt to javafx.fxml;
 
-    // Membuka package Controller Admin
+    // Controller Admin
     opens com.bcourt.admin.controller to javafx.fxml;
 
-    // Export package utama
-    exports com.bcourt;
-}
+    // Controller Kasir
+    opens com.bcourt.controller to javafx.fxml;
 
+    // Model untuk JavaFX
+    opens com.bcourt.model to javafx.base;
+
+    // Export package
+    exports com.bcourt;
+    exports com.bcourt.controller;
+    exports com.bcourt.model;
+}
