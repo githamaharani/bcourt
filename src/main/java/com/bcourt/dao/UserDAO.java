@@ -2,6 +2,7 @@ package com.bcourt.dao;
 
 import com.bcourt.util.Koneksi;
 import com.bcourt.util.PasswordUtil;
+import com.bcourt.util.UserSession;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -10,7 +11,6 @@ import java.sql.SQLException;
 
 public class UserDAO {
 
-    // Memeriksa apakah username sudah digunakan
     public boolean isUsernameExists(String username) {
 
         String sql = "SELECT id_pengguna FROM pengguna WHERE username = ?";
@@ -30,20 +30,14 @@ public class UserDAO {
         }
     }
 
-    // Mendaftarkan akun Kasir baru
     public boolean registerUser(
             String nama,
             String username,
-            String password
-    ) {
+            String password) {
 
-        String sql = "INSERT INTO pengguna (nama, username, password, role) "
-                   + "VALUES (?, ?, ?, ?)";
-
-        if (isUsernameExists(username)) {
-            System.out.println("Username sudah digunakan.");
-            return false;
-        }
+        String sql = "INSERT INTO pengguna "
+                + "(nama, username, password, role) "
+                + "VALUES (?, ?, ?, ?)";
 
         String hashedPassword = PasswordUtil.hashPassword(password);
 
@@ -55,9 +49,7 @@ public class UserDAO {
             stmt.setString(3, hashedPassword);
             stmt.setString(4, "Kasir");
 
-            int result = stmt.executeUpdate();
-
-            return result > 0;
+            return stmt.executeUpdate() > 0;
 
         } catch (SQLException e) {
             System.err.println("Gagal mendaftarkan pengguna: " + e.getMessage());
@@ -65,8 +57,6 @@ public class UserDAO {
         }
     }
 
-    // Memeriksa login pengguna
-    // Mengembalikan role jika berhasil, null jika gagal
     public String loginUser(String username, String password) {
 
         String sql = "SELECT password, role FROM pengguna WHERE username = ?";
@@ -90,9 +80,47 @@ public class UserDAO {
             }
 
         } catch (SQLException e) {
-            System.err.println("Gagal melakukan login: " + e.getMessage());
+            System.err.println("Gagal login: " + e.getMessage());
         }
 
         return null;
+    }
+
+    public boolean loginAndSetSession(String username, String password) {
+
+        String sql = "SELECT id_pengguna, nama, username, password, role "
+                + "FROM pengguna WHERE username = ?";
+
+        try (Connection conn = Koneksi.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+
+            stmt.setString(1, username);
+
+            try (ResultSet rs = stmt.executeQuery()) {
+
+                if (rs.next()) {
+
+                    String storedPassword = rs.getString("password");
+
+                    if (PasswordUtil.verifyPassword(password, storedPassword)) {
+
+                        UserSession.setUser(
+                                rs.getInt("id_pengguna"),
+                                rs.getString("nama"),
+                                rs.getString("username"),
+                                rs.getString("role")
+                        );
+
+                        return true;
+                    }
+                }
+            }
+
+        } catch (SQLException e) {
+            System.err.println("Gagal login dan mengambil session: "
+                    + e.getMessage());
+        }
+
+        return false;
     }
 }

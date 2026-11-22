@@ -1,47 +1,76 @@
 package com.bcourt.dao;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-
+import com.bcourt.model.Lapangan;
 import com.bcourt.util.Koneksi;
+
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class LapanganDAO {
 
-    public void tampilkanSemuaLapangan() {
-        String sql = "SELECT id_lapangan, nama, jenis_lapangan, harga_per_jam, status FROM lapangan";
+    public List<Lapangan> getAllLapangan() {
+
+        List<Lapangan> daftar = new ArrayList<>();
+
+        String sql = "SELECT id_lapangan, nama, jenis_lapangan, "
+                   + "harga_per_jam, status FROM lapangan "
+                   + "ORDER BY nama";
 
         try (Connection conn = Koneksi.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql);
              ResultSet rs = stmt.executeQuery()) {
 
-            System.out.println("=== DATA LAPANGAN ===");
-            boolean adaData = false;
-
             while (rs.next()) {
-                adaData = true;
-                int id = rs.getInt("id_lapangan");
-                String nama = rs.getString("nama");
-                String jenis = rs.getString("jenis_lapangan");
-                double harga = rs.getDouble("harga_per_jam");
-                String status = rs.getString("status");
 
-                System.out.printf("ID: %d | Nama: %s | Jenis: %s | Harga/Jam: %.2f | Status: %s%n",
-                        id, nama, jenis, harga, status);
-            }
+                Lapangan lapangan = Lapangan.buat(
+                        rs.getInt("id_lapangan"),
+                        rs.getString("nama"),
+                        rs.getString("jenis_lapangan"),
+                        rs.getDouble("harga_per_jam"),
+                        rs.getString("status")
+                );
 
-            if (!adaData) {
-                System.out.println("Belum ada data di tabel lapangan.");
+                daftar.add(lapangan);
             }
 
         } catch (SQLException e) {
-            System.out.println("Gagal mengambil data lapangan: " + e.getMessage());
+            System.err.println("Gagal mengambil lapangan: " + e.getMessage());
         }
+
+        return daftar;
     }
 
-    public static void main(String[] args) {
-        LapanganDAO dao = new LapanganDAO();
-        dao.tampilkanSemuaLapangan();
+    public List<Lapangan> getLapanganTersedia() {
+
+        List<Lapangan> daftar = new ArrayList<>();
+
+        String sql = "SELECT id_lapangan, nama, jenis_lapangan, "
+                   + "harga_per_jam, status FROM lapangan "
+                   + "WHERE status = 'Tersedia' ORDER BY nama";
+
+        try (Connection conn = Koneksi.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql);
+             ResultSet rs = stmt.executeQuery()) {
+
+            while (rs.next()) {
+
+                daftar.add(
+                        Lapangan.buat(
+                                rs.getInt("id_lapangan"),
+                                rs.getString("nama"),
+                                rs.getString("jenis_lapangan"),
+                                rs.getDouble("harga_per_jam"),
+                                rs.getString("status")
+                        )
+                );
+            }
+
+        } catch (SQLException e) {
+            System.err.println("Gagal mengambil lapangan tersedia: "
+                    + e.getMessage());
+        }
+
+        return daftar;
     }
 }
