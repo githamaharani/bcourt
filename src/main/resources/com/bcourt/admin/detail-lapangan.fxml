@@ -19,7 +19,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Rectangle?>
 
-<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bcourt.admin.controller.DetailLapanganController">
    <children>
       <HBox fx:id="mainLayout" prefHeight="720.0" prefWidth="1280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -32,7 +32,7 @@
                      <children>
                         <ImageView fx:id="logoImageView1" fitHeight="75.23" fitWidth="198.22" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../Screenshot%202026-11-21%20144307%201.png" />
+                              <Image url="@../assets/Screenshot%202026-11-21%20144307%201.png" />
                            </image>
                         </ImageView>
                      </children>
@@ -46,7 +46,7 @@
                            <children>
                               <ImageView fx:id="lapanganIcon1" fitHeight="16.88" fitWidth="21.33" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../Dashboard%20icon.png" />
+                                    <Image url="@../assets/Dashboard%20icon.png" />
                                  </image>
                               </ImageView>
                               <Label fx:id="lapanganLabel1" style="-fx-font-size: 11.87px; -fx-text-fill: #58321B;" text="Dashboard" />
@@ -59,7 +59,7 @@
                                     <ColorAdjust brightness="1.0" />
                                  </effect>
                                  <image>
-                                    <Image url="@../Manajemen%20Lapangan%20icon.png" />
+                                    <Image url="@../assets/Manajemen%20Lapangan%20icon.png" />
                                  </image>
                               </ImageView>
                               <Label fx:id="dashboardLabel11" style="-fx-font-size: 11.87px; -fx-font-weight: bold; -fx-text-fill: #FFFFFF;" text="Manajemen Lapangan" />
@@ -69,7 +69,7 @@
                            <children>
                               <ImageView fx:id="peralatanIcon1" fitHeight="16.88" fitWidth="21.33" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../Manajemen%20Peralatan%20icon.png" />
+                                    <Image url="@../assets/Manajemen%20Peralatan%20icon.png" />
                                  </image>
                               </ImageView>
                               <Label fx:id="peralatanLabel1" style="-fx-font-size: 11.87px; -fx-text-fill: #58321B;" text="Manajemen Peralatan" />
@@ -79,7 +79,7 @@
                            <children>
                               <ImageView fx:id="transaksiIcon1" fitHeight="16.88" fitWidth="21.33" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../Data%20Transaksi%20icon.png" />
+                                    <Image url="@../assets/Data%20Transaksi%20icon.png" />
                                  </image>
                               </ImageView>
                               <Label fx:id="transaksiLabel1" style="-fx-font-size: 11.87px; -fx-text-fill: #58321B;" text="Data Transaksi" />
@@ -89,7 +89,7 @@
                            <children>
                               <ImageView fx:id="laporanIcon1" fitHeight="16.88" fitWidth="21.33" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../Laporan%20icon.png" />
+                                    <Image url="@../assets/Laporan%20icon.png" />
                                  </image>
                               </ImageView>
                               <Label fx:id="laporanLabel1" style="-fx-font-size: 11.87px; -fx-text-fill: #58321B;" text="Laporan" />
@@ -99,7 +99,7 @@
                            <children>
                               <ImageView fx:id="penggunaIcon1" fitHeight="16.88" fitWidth="21.33" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../Manajemen%20Pengguna%20icon.png" />
+                                    <Image url="@../assets/Manajemen%20Pengguna%20icon.png" />
                                  </image>
                               </ImageView>
                               <Label fx:id="penggunaLabel1" style="-fx-font-size: 11.87px; -fx-text-fill: #58321B;" text="Manajemen Pengguna" />
@@ -113,7 +113,7 @@
                      <children>
                         <ImageView fx:id="profileIcon1" fitHeight="16.88" fitWidth="21.33" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../Profile%20icon.png" />
+                              <Image url="@../assets/Profile%20icon.png" />
                            </image>
                         </ImageView>
                         <Label style="-fx-font-size: 11.87px; -fx-text-fill: #58321B;" text="Profil Saya" />
@@ -129,7 +129,7 @@
                </padding>
                <children>
 
-                  <!-- Header: breadcrumb, greeting, judul (kiri) dan profil Admin (kanan) -->
+                  <!-- Header -->
                   <HBox fx:id="topHeader" alignment="TOP_LEFT">
                      <children>
                         <VBox fx:id="breadcrumbAndTitle" spacing="3.16">
@@ -154,8 +154,9 @@
                               <Separator orientation="VERTICAL" prefHeight="25.31" />
                               <ImageView fx:id="adminProfileImageView" fitHeight="33.75" fitWidth="42.67" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../Profile%20icon.png" />
-                                 </image></ImageView>
+                                    <Image url="@../assets/Profile%20icon.png" />
+                                 </image>
+                              </ImageView>
                               <VBox fx:id="adminInformation" alignment="CENTER_LEFT" spacing="0.79">
                                  <children>
                                     <Label fx:id="adminNameLabel" style="-fx-font-size: 11.86px;-fx-font-weight: bold;-fx-text-fill: #58321B;" text="Admin" />
@@ -175,19 +176,21 @@
                            <graphic>
                               <ImageView fx:id="backIcon" fitHeight="14.06" fitWidth="17.78" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../Ikon%20kembali.png" />
-                                 </image></ImageView>
+                                    <Image url="@../assets/Ikon%20kembali.png" />
+                                 </image>
+                              </ImageView>
                            </graphic>
                         </Button>
                         <Button fx:id="editCourtButton" contentDisplay="LEFT" graphicTextGap="7.91" mnemonicParsing="false" prefHeight="33.75" prefWidth="222.22" style="-fx-background-color: #EF5C00;-fx-background-radius: 18.97;-fx-text-fill: #FFFFFF;-fx-font-size: 12.65px;-fx-font-weight: bold;" text="Edit Lapangan">
                            <graphic>
                               <ImageView fx:id="editCourtIcon" fitHeight="14.06" fitWidth="17.78" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../Ikon%20edit.png" />
+                                    <Image url="@../assets/Ikon%20edit.png" />
                                  </image>
                                  <effect>
                                     <ColorAdjust brightness="1.0" />
-                                 </effect></ImageView>
+                                 </effect>
+                              </ImageView>
                            </graphic>
                         </Button>
                      </children>
@@ -218,7 +221,7 @@
                                                 <Rectangle arcHeight="28.46" arcWidth="28.46" height="261.56" width="370.67" />
                                              </clip>
                                              <image>
-                                                <Image url="@../../618e70119b754.jpeg" />
+                                                <Image url="@../assets/618e70119b754.jpeg" />
                                              </image>
                                           </ImageView>
                                        </children>
@@ -226,7 +229,7 @@
                                  </children>
                               </VBox>
 
-                              <!-- Fasilitas (daftar teks biasa) -->
+                              <!-- Fasilitas -->
                               <VBox fx:id="facilitiesCard" prefHeight="189.84" spacing="11.07" style="-fx-background-color: #FFFFFF;-fx-background-radius: 17.39;-fx-padding: 15.81;">
                                  <children>
                                     <HBox fx:id="facilitiesHeader" alignment="CENTER_LEFT" spacing="7.91">
@@ -236,12 +239,12 @@
                                     </HBox>
                                     <VBox fx:id="facilitiesList" spacing="7.12">
                                        <children>
-                                    <Label fx:id="facility1" style="-fx-font-size: 11.86px;-fx-text-fill: #805B47;" text="•  Penerangan LED" />
-                                    <Label fx:id="facility2" style="-fx-font-size: 11.86px;-fx-text-fill: #805B47;" text="•  Sirkulasi Udara" />
-                                    <Label fx:id="facility3" style="-fx-font-size: 11.86px;-fx-text-fill: #805B47;" text="•  Area Istirahat" />
-                                    <Label fx:id="facility4" style="-fx-font-size: 11.86px;-fx-text-fill: #805B47;" text="•  Locker Penyimpanan" />
-                                    <Label fx:id="facility5" style="-fx-font-size: 11.86px;-fx-text-fill: #805B47;" text="•  Dispenser Air Minum" />
-                                    <Label fx:id="facility6" style="-fx-font-size: 11.86px;-fx-text-fill: #805B47;" text="•  Peminjaman Peralatan" />
+                                          <Label fx:id="facility1" style="-fx-font-size: 11.86px;-fx-text-fill: #805B47;" text="•  Penerangan LED" />
+                                          <Label fx:id="facility2" style="-fx-font-size: 11.86px;-fx-text-fill: #805B47;" text="•  Sirkulasi Udara" />
+                                          <Label fx:id="facility3" style="-fx-font-size: 11.86px;-fx-text-fill: #805B47;" text="•  Area Istirahat" />
+                                          <Label fx:id="facility4" style="-fx-font-size: 11.86px;-fx-text-fill: #805B47;" text="•  Locker Penyimpanan" />
+                                          <Label fx:id="facility5" style="-fx-font-size: 11.86px;-fx-text-fill: #805B47;" text="•  Dispenser Air Minum" />
+                                          <Label fx:id="facility6" style="-fx-font-size: 11.86px;-fx-text-fill: #805B47;" text="•  Peminjaman Peralatan" />
                                        </children>
                                     </VBox>
                                  </children>
@@ -281,8 +284,9 @@
                                                    <children>
                                                       <ImageView fx:id="courtTypeIcon" fitHeight="30.94" fitWidth="39.11" pickOnBounds="true" preserveRatio="true">
                                                          <image>
-                                                            <Image url="@../Manajemen%20Lapangan%20icon.png" />
-                                                         </image></ImageView>
+                                                            <Image url="@../assets/Manajemen%20Lapangan%20icon.png" />
+                                                         </image>
+                                                      </ImageView>
                                                    </children>
                                                 </StackPane>
                                                 <VBox fx:id="courtTypeText" alignment="CENTER_LEFT" spacing="3.16">
@@ -300,8 +304,9 @@
                                                    <children>
                                                       <ImageView fx:id="courtPriceIcon" fitHeight="30.94" fitWidth="39.11" pickOnBounds="true" preserveRatio="true">
                                                          <image>
-                                                            <Image url="@../Data%20Transaksi%20icon.png" />
-                                                         </image></ImageView>
+                                                            <Image url="@../assets/Data%20Transaksi%20icon.png" />
+                                                         </image>
+                                                      </ImageView>
                                                    </children>
                                                 </StackPane>
                                                 <VBox fx:id="courtPriceText" alignment="CENTER_LEFT" spacing="3.16">
@@ -356,42 +361,46 @@
                                           <RowConstraints minHeight="30.23" prefHeight="30.23" vgrow="NEVER" />
                                        </rowConstraints>
                                        <children>
-                                    <Pane fx:id="scheduleHeaderBackground" style="-fx-background-color: #F5E8E1;-fx-background-radius: 7.91;" GridPane.columnIndex="0" GridPane.columnSpan="5" GridPane.rowIndex="0" />
-                                    <Pane fx:id="scheduleRowBackground1" style="-fx-background-color: #FFFFFF;-fx-border-color: transparent transparent #F0E2DA transparent;" GridPane.columnIndex="0" GridPane.columnSpan="5" GridPane.rowIndex="1" />
-                                    <Pane fx:id="scheduleRowBackground2" style="-fx-background-color: #FFF8F4;-fx-border-color: transparent transparent #F0E2DA transparent;" GridPane.columnIndex="0" GridPane.columnSpan="5" GridPane.rowIndex="2" />
-                                    <Pane fx:id="scheduleRowBackground3" style="-fx-background-color: #FFFFFF;-fx-border-color: transparent transparent #F0E2DA transparent;" GridPane.columnIndex="0" GridPane.columnSpan="5" GridPane.rowIndex="3" />
-                                    <Label fx:id="scheduleHeaderLabel1" style="-fx-font-size: 11.07px;-fx-font-weight: bold;-fx-text-fill: #58321B;-fx-padding: 0.0 0.0 0.0 9.49;" text="No." GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
-                                    <Label fx:id="scheduleHeaderLabel2" style="-fx-font-size: 11.07px;-fx-font-weight: bold;-fx-text-fill: #58321B;-fx-padding: 0.0 0.0 0.0 9.49;" text="Waktu" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
-                                    <Label fx:id="scheduleHeaderLabel3" style="-fx-font-size: 11.07px;-fx-font-weight: bold;-fx-text-fill: #58321B;-fx-padding: 0.0 0.0 0.0 9.49;" text="Penyewa" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
-                                    <Label fx:id="scheduleHeaderLabel4" style="-fx-font-size: 11.07px;-fx-font-weight: bold;-fx-text-fill: #58321B;-fx-padding: 0.0 0.0 0.0 9.49;" text="Durasi" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
-                                    <Label fx:id="scheduleHeaderLabel5" style="-fx-font-size: 11.07px;-fx-font-weight: bold;-fx-text-fill: #58321B;-fx-padding: 0.0 0.0 0.0 9.49;" text="Status" GridPane.columnIndex="4" GridPane.halignment="LEFT" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
-                                    <Label fx:id="scheduleCell1_1" style="-fx-font-size: 11.07px;-fx-text-fill: #58321B;-fx-padding: 0.0 0.0 0.0 9.49;" text="1" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
-                                    <Label fx:id="scheduleCell1_2" style="-fx-font-size: 11.07px;-fx-text-fill: #58321B;-fx-padding: 0.0 0.0 0.0 9.49;" text="14:00 – 15:00" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
-                                    <Label fx:id="scheduleCell1_3" style="-fx-font-size: 11.07px;-fx-text-fill: #58321B;-fx-padding: 0.0 0.0 0.0 9.49;" text="Andi Pratama" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
-                                    <Label fx:id="scheduleCell1_4" style="-fx-font-size: 11.07px;-fx-text-fill: #58321B;-fx-padding: 0.0 0.0 0.0 9.49;" text="1 Jam" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
-                                    <Label fx:id="scheduleStatus1" style="-fx-background-color: #E3F6EA;-fx-background-radius: 11.07;-fx-font-size: 10.28px;-fx-font-weight: bold;-fx-text-fill: #2E7D4F;-fx-padding: 3.16 11.07 3.16 11.07;" text="Selesai" GridPane.columnIndex="4" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
-                                       <GridPane.margin>
-                                          <Insets left="6.32" />
-                                       </GridPane.margin>
-                                    </Label>
-                                    <Label fx:id="scheduleCell2_1" style="-fx-font-size: 11.07px;-fx-text-fill: #58321B;-fx-padding: 0.0 0.0 0.0 9.49;" text="2" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
-                                    <Label fx:id="scheduleCell2_2" style="-fx-font-size: 11.07px;-fx-text-fill: #58321B;-fx-padding: 0.0 0.0 0.0 9.49;" text="16:00 – 18:00" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
-                                    <Label fx:id="scheduleCell2_3" style="-fx-font-size: 11.07px;-fx-text-fill: #58321B;-fx-padding: 0.0 0.0 0.0 9.49;" text="Budi Santoso" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
-                                    <Label fx:id="scheduleCell2_4" style="-fx-font-size: 11.07px;-fx-text-fill: #58321B;-fx-padding: 0.0 0.0 0.0 9.49;" text="2 Jam" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
-                                    <Label fx:id="scheduleStatus2" style="-fx-background-color: #FDE3D1;-fx-background-radius: 11.07;-fx-font-size: 10.28px;-fx-font-weight: bold;-fx-text-fill: #B8480A;-fx-padding: 3.16 11.07 3.16 11.07;" text="Berlangsung" GridPane.columnIndex="4" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
-                                       <GridPane.margin>
-                                          <Insets left="6.32" />
-                                       </GridPane.margin>
-                                    </Label>
-                                    <Label fx:id="scheduleCell3_1" style="-fx-font-size: 11.07px;-fx-text-fill: #58321B;-fx-padding: 0.0 0.0 0.0 9.49;" text="3" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
-                                    <Label fx:id="scheduleCell3_2" style="-fx-font-size: 11.07px;-fx-text-fill: #58321B;-fx-padding: 0.0 0.0 0.0 9.49;" text="18:30 – 20:30" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
-                                    <Label fx:id="scheduleCell3_3" style="-fx-font-size: 11.07px;-fx-text-fill: #58321B;-fx-padding: 0.0 0.0 0.0 9.49;" text="Rizky Maulana" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
-                                    <Label fx:id="scheduleCell3_4" style="-fx-font-size: 11.07px;-fx-text-fill: #58321B;-fx-padding: 0.0 0.0 0.0 9.49;" text="2 Jam" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
-                                    <Label fx:id="scheduleStatus3" style="-fx-background-color: #EBE0DA;-fx-background-radius: 11.07;-fx-font-size: 10.28px;-fx-font-weight: bold;-fx-text-fill: #58321B;-fx-padding: 3.16 11.07 3.16 11.07;" text="Berikutnya" GridPane.columnIndex="4" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
-                                       <GridPane.margin>
-                                          <Insets left="6.32" />
-                                       </GridPane.margin>
-                                    </Label>
+                                          <Pane fx:id="scheduleHeaderBackground" style="-fx-background-color: #F5E8E1;-fx-background-radius: 7.91;" GridPane.columnIndex="0" GridPane.columnSpan="5" GridPane.rowIndex="0" />
+                                          <Pane fx:id="scheduleRowBackground1" style="-fx-background-color: #FFFFFF;-fx-border-color: transparent transparent #F0E2DA transparent;" GridPane.columnIndex="0" GridPane.columnSpan="5" GridPane.rowIndex="1" />
+                                          <Pane fx:id="scheduleRowBackground2" style="-fx-background-color: #FFF8F4;-fx-border-color: transparent transparent #F0E2DA transparent;" GridPane.columnIndex="0" GridPane.columnSpan="5" GridPane.rowIndex="2" />
+                                          <Pane fx:id="scheduleRowBackground3" style="-fx-background-color: #FFFFFF;-fx-border-color: transparent transparent #F0E2DA transparent;" GridPane.columnIndex="0" GridPane.columnSpan="5" GridPane.rowIndex="3" />
+
+                                          <Label fx:id="scheduleHeaderLabel1" style="-fx-font-size: 11.07px;-fx-font-weight: bold;-fx-text-fill: #58321B;-fx-padding: 0.0 0.0 0.0 9.49;" text="No." GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                                          <Label fx:id="scheduleHeaderLabel2" style="-fx-font-size: 11.07px;-fx-font-weight: bold;-fx-text-fill: #58321B;-fx-padding: 0.0 0.0 0.0 9.49;" text="Waktu" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                                          <Label fx:id="scheduleHeaderLabel3" style="-fx-font-size: 11.07px;-fx-font-weight: bold;-fx-text-fill: #58321B;-fx-padding: 0.0 0.0 0.0 9.49;" text="Penyewa" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                                          <Label fx:id="scheduleHeaderLabel4" style="-fx-font-size: 11.07px;-fx-font-weight: bold;-fx-text-fill: #58321B;-fx-padding: 0.0 0.0 0.0 9.49;" text="Durasi" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                                          <Label fx:id="scheduleHeaderLabel5" style="-fx-font-size: 11.07px;-fx-font-weight: bold;-fx-text-fill: #58321B;-fx-padding: 0.0 0.0 0.0 9.49;" text="Status" GridPane.columnIndex="4" GridPane.halignment="LEFT" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+
+                                          <Label fx:id="scheduleCell1_1" style="-fx-font-size: 11.07px;-fx-text-fill: #58321B;-fx-padding: 0.0 0.0 0.0 9.49;" text="1" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                                          <Label fx:id="scheduleCell1_2" style="-fx-font-size: 11.07px;-fx-text-fill: #58321B;-fx-padding: 0.0 0.0 0.0 9.49;" text="14:00 – 15:00" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                                          <Label fx:id="scheduleCell1_3" style="-fx-font-size: 11.07px;-fx-text-fill: #58321B;-fx-padding: 0.0 0.0 0.0 9.49;" text="Andi Pratama" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                                          <Label fx:id="scheduleCell1_4" style="-fx-font-size: 11.07px;-fx-text-fill: #58321B;-fx-padding: 0.0 0.0 0.0 9.49;" text="1 Jam" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                                          <Label fx:id="scheduleStatus1" style="-fx-background-color: #E3F6EA;-fx-background-radius: 11.07;-fx-font-size: 10.28px;-fx-font-weight: bold;-fx-text-fill: #2E7D4F;-fx-padding: 3.16 11.07 3.16 11.07;" text="Selesai" GridPane.columnIndex="4" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                             <GridPane.margin>
+                                                <Insets left="6.32" />
+                                             </GridPane.margin>
+                                          </Label>
+
+                                          <Label fx:id="scheduleCell2_1" style="-fx-font-size: 11.07px;-fx-text-fill: #58321B;-fx-padding: 0.0 0.0 0.0 9.49;" text="2" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                                          <Label fx:id="scheduleCell2_2" style="-fx-font-size: 11.07px;-fx-text-fill: #58321B;-fx-padding: 0.0 0.0 0.0 9.49;" text="16:00 – 18:00" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                                          <Label fx:id="scheduleCell2_3" style="-fx-font-size: 11.07px;-fx-text-fill: #58321B;-fx-padding: 0.0 0.0 0.0 9.49;" text="Budi Santoso" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                                          <Label fx:id="scheduleCell2_4" style="-fx-font-size: 11.07px;-fx-text-fill: #58321B;-fx-padding: 0.0 0.0 0.0 9.49;" text="2 Jam" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                                          <Label fx:id="scheduleStatus2" style="-fx-background-color: #FDE3D1;-fx-background-radius: 11.07;-fx-font-size: 10.28px;-fx-font-weight: bold;-fx-text-fill: #B8480A;-fx-padding: 3.16 11.07 3.16 11.07;" text="Berlangsung" GridPane.columnIndex="4" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                             <GridPane.margin>
+                                                <Insets left="6.32" />
+                                             </GridPane.margin>
+                                          </Label>
+
+                                          <Label fx:id="scheduleCell3_1" style="-fx-font-size: 11.07px;-fx-text-fill: #58321B;-fx-padding: 0.0 0.0 0.0 9.49;" text="3" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                                          <Label fx:id="scheduleCell3_2" style="-fx-font-size: 11.07px;-fx-text-fill: #58321B;-fx-padding: 0.0 0.0 0.0 9.49;" text="18:30 – 20:30" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                                          <Label fx:id="scheduleCell3_3" style="-fx-font-size: 11.07px;-fx-text-fill: #58321B;-fx-padding: 0.0 0.0 0.0 9.49;" text="Rizky Maulana" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                                          <Label fx:id="scheduleCell3_4" style="-fx-font-size: 11.07px;-fx-text-fill: #58321B;-fx-padding: 0.0 0.0 0.0 9.49;" text="2 Jam" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                                          <Label fx:id="scheduleStatus3" style="-fx-background-color: #EBE0DA;-fx-background-radius: 11.07;-fx-font-size: 10.28px;-fx-font-weight: bold;-fx-text-fill: #58321B;-fx-padding: 3.16 11.07 3.16 11.07;" text="Berikutnya" GridPane.columnIndex="4" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                             <GridPane.margin>
+                                                <Insets left="6.32" />
+                                             </GridPane.margin>
+                                          </Label>
                                        </children>
                                     </GridPane>
                                  </children>

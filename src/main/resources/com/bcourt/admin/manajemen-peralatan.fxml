@@ -18,7 +18,7 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bcourt.admin.controller.ManajemenPeralatanController">
    <children>
       <HBox fx:id="mainLayout" prefHeight="720.0" prefWidth="1280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -31,7 +31,7 @@
                      <children>
                         <ImageView fx:id="logoImageView1" fitHeight="75.23" fitWidth="198.22" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@B-Court/Screenshot%202026-11-21%20144307%201.png" />
+                              <Image url="@../assets//Screenshot%202026-11-21%20144307%201.png" />
                            </image>
                         </ImageView>
                      </children>
@@ -45,7 +45,7 @@
                            <children>
                               <ImageView fx:id="lapanganIcon1" fitHeight="16.88" fitWidth="21.33" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@B-Court/Dashboard%20icon.png" />
+                                    <Image url="@../assets//Dashboard%20icon.png" />
                                  </image>
                               </ImageView>
                               <Label fx:id="lapanganLabel1" style="-fx-font-size: 11.87px; -fx-text-fill: #58321B;" text="Dashboard" />
@@ -55,7 +55,7 @@
                            <children>
                               <ImageView fx:id="peralatanIcon1" fitHeight="16.88" fitWidth="21.33" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@B-Court/Manajemen%20Lapangan%20icon.png" />
+                                    <Image url="@../assets//Manajemen%20Lapangan%20icon.png" />
                                  </image>
                               </ImageView>
                               <Label fx:id="peralatanLabel1" style="-fx-font-size: 11.87px; -fx-text-fill: #58321B;" text="Manajemen Lapangan" />
@@ -68,7 +68,7 @@
                                     <ColorAdjust brightness="1.0" />
                                  </effect>
                                  <image>
-                                    <Image url="@B-Court/Manajemen%20Peralatan%20icon.png" />
+                                    <Image url="@../assets//Manajemen%20Peralatan%20icon.png" />
                                  </image>
                               </ImageView>
                               <Label fx:id="dashboardLabel111" style="-fx-font-size: 11.87px; -fx-font-weight: bold; -fx-text-fill: #FFFFFF;" text="Manajemen Peralatan" />
@@ -78,7 +78,7 @@
                            <children>
                               <ImageView fx:id="transaksiIcon1" fitHeight="16.88" fitWidth="21.33" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@B-Court/Data%20Transaksi%20icon.png" />
+                                    <Image url="@../assets//Data%20Transaksi%20icon.png" />
                                  </image>
                               </ImageView>
                               <Label fx:id="transaksiLabel1" style="-fx-font-size: 11.87px; -fx-text-fill: #58321B;" text="Data Transaksi" />
@@ -88,7 +88,7 @@
                            <children>
                               <ImageView fx:id="laporanIcon1" fitHeight="16.88" fitWidth="21.33" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@B-Court/Laporan%20icon.png" />
+                                    <Image url="@../assets//Laporan%20icon.png" />
                                  </image>
                               </ImageView>
                               <Label fx:id="laporanLabel1" style="-fx-font-size: 11.87px; -fx-text-fill: #58321B;" text="Laporan" />
@@ -98,7 +98,7 @@
                            <children>
                               <ImageView fx:id="penggunaIcon1" fitHeight="16.88" fitWidth="21.33" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@B-Court/Manajemen%20Pengguna%20icon.png" />
+                                    <Image url="@../assets//Manajemen%20Pengguna%20icon.png" />
                                  </image>
                               </ImageView>
                               <Label fx:id="penggunaLabel1" style="-fx-font-size: 11.87px; -fx-text-fill: #58321B;" text="Manajemen Pengguna" />
@@ -112,7 +112,7 @@
                      <children>
                         <ImageView fx:id="profileIcon1" fitHeight="16.88" fitWidth="21.33" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@B-Court/Profile%20icon.png" />
+                              <Image url="@../assets//Profile%20icon.png" />
                            </image>
                         </ImageView>
                         <Label style="-fx-font-size: 11.87px; -fx-text-fill: #58321B;" text="Profil Saya" />
@@ -147,7 +147,7 @@
                               <Separator orientation="VERTICAL" prefHeight="30.0" />
                               <ImageView fx:id="adminProfileImageView" fitHeight="38.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@B-Court/Profile%20icon.png" />
+                                    <Image url="@../assets//Profile%20icon.png" />
                                  </image></ImageView>
                               <VBox fx:id="adminInformation" alignment="CENTER_LEFT" spacing="1.0">
                                  <children>
@@ -177,14 +177,14 @@
                                  <children>
                                     <ImageView fx:id="totalCourtIcon1" fitHeight="42.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@B-Court/Manajemen%20Peralatan%20icon.png" />
+                                          <Image url="@../assets//Manajemen%20Peralatan%20icon.png" />
                                        </image>
                                     </ImageView>
                                  </children>
                               </StackPane>
                               <VBox fx:id="totalCourtInformation1" alignment="CENTER_LEFT" spacing="2.0">
                                  <children>
-                                    <Label style="-fx-font-size: 14px; -fx-text-fill: #9B7967;" text="Total Lapangan" />
+                                    <Label style="-fx-font-size: 14px; -fx-text-fill: #9B7967;" text="Total Peralatan" />
                                     <Label fx:id="totalCourtValue1" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #58321B;" text="12" />
                                  </children>
                               </VBox>
@@ -196,7 +196,7 @@
                                  <children>
                                     <ImageView fx:id="availableCourtIcon1" fitHeight="42.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@B-Court/Ikon%20Tersedia.png" />
+                                          <Image url="@../assets//Ikon%20Tersedia.png" />
                                        </image>
                                     </ImageView>
                                  </children>
@@ -215,7 +215,7 @@
                                  <children>
                                     <ImageView fx:id="occupiedCourtIcon1" fitHeight="42.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@B-Court/Ikon%20Terpakai.png" />
+                                          <Image url="@../assets//Ikon%20Terpakai.png" />
                                        </image>
                                     </ImageView>
                                  </children>
@@ -234,7 +234,7 @@
                                  <children>
                                     <ImageView fx:id="maintenanceCourtIcon1" fitHeight="42.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@B-Court/Ikon%20Perlu%20Perawatan.png" />
+                                          <Image url="@../assets//Ikon%20Perlu%20Perawatan.png" />
                                        </image>
                                     </ImageView>
                                  </children>
@@ -310,7 +310,7 @@
                                              <graphic>
                                                 <ImageView fx:id="detailActionIcon2" fitHeight="14.06" fitWidth="17.78" pickOnBounds="true" preserveRatio="true">
                                                    <image>
-                                                      <Image url="@B-Court/Ikon%20detail.png" />
+                                                      <Image url="@../assets//Ikon%20detail.png" />
                                                    </image>
                                                 </ImageView>
                                              </graphic>
@@ -319,7 +319,7 @@
                                              <graphic>
                                                 <ImageView fx:id="editActionIcon2" fitHeight="14.06" fitWidth="17.78" pickOnBounds="true" preserveRatio="true">
                                                    <image>
-                                                      <Image url="@B-Court/Ikon%20edit.png" />
+                                                      <Image url="@../assets//Ikon%20edit.png" />
                                                    </image>
                                                 </ImageView>
                                              </graphic>
@@ -328,7 +328,7 @@
                                              <graphic>
                                                 <ImageView fx:id="deleteActionIcon2" fitHeight="14.06" fitWidth="17.78" pickOnBounds="true" preserveRatio="true">
                                                    <image>
-                                                      <Image url="@B-Court/Ikon%20hapus.png" />
+                                                      <Image url="@../assets//Ikon%20hapus.png" />
                                                    </image>
                                                 </ImageView>
                                              </graphic>
@@ -363,7 +363,7 @@
                                              <graphic>
                                                 <ImageView fx:id="detailActionIcon21" fitHeight="14.06" fitWidth="17.78" pickOnBounds="true" preserveRatio="true">
                                                    <image>
-                                                      <Image url="@B-Court/Ikon%20detail.png" />
+                                                      <Image url="@../assets//Ikon%20detail.png" />
                                                    </image>
                                                 </ImageView>
                                              </graphic>
@@ -372,7 +372,7 @@
                                              <graphic>
                                                 <ImageView fx:id="editActionIcon21" fitHeight="14.06" fitWidth="17.78" pickOnBounds="true" preserveRatio="true">
                                                    <image>
-                                                      <Image url="@B-Court/Ikon%20edit.png" />
+                                                      <Image url="@../assets//Ikon%20edit.png" />
                                                    </image>
                                                 </ImageView>
                                              </graphic>
@@ -381,7 +381,7 @@
                                              <graphic>
                                                 <ImageView fx:id="deleteActionIcon21" fitHeight="14.06" fitWidth="17.78" pickOnBounds="true" preserveRatio="true">
                                                    <image>
-                                                      <Image url="@B-Court/Ikon%20hapus.png" />
+                                                      <Image url="@../assets//Ikon%20hapus.png" />
                                                    </image>
                                                 </ImageView>
                                              </graphic>
@@ -416,7 +416,7 @@
                                              <graphic>
                                                 <ImageView fx:id="detailActionIcon211" fitHeight="14.06" fitWidth="17.78" pickOnBounds="true" preserveRatio="true">
                                                    <image>
-                                                      <Image url="@B-Court/Ikon%20detail.png" />
+                                                      <Image url="@../assets//Ikon%20detail.png" />
                                                    </image>
                                                 </ImageView>
                                              </graphic>
@@ -425,7 +425,7 @@
                                              <graphic>
                                                 <ImageView fx:id="editActionIcon211" fitHeight="14.06" fitWidth="17.78" pickOnBounds="true" preserveRatio="true">
                                                    <image>
-                                                      <Image url="@B-Court/Ikon%20edit.png" />
+                                                      <Image url="@../assets//Ikon%20edit.png" />
                                                    </image>
                                                 </ImageView>
                                              </graphic>
@@ -434,7 +434,7 @@
                                              <graphic>
                                                 <ImageView fx:id="deleteActionIcon211" fitHeight="14.06" fitWidth="17.78" pickOnBounds="true" preserveRatio="true">
                                                    <image>
-                                                      <Image url="@B-Court/Ikon%20hapus.png" />
+                                                      <Image url="@../assets//Ikon%20hapus.png" />
                                                    </image>
                                                 </ImageView>
                                              </graphic>
@@ -469,7 +469,7 @@
                                              <graphic>
                                                 <ImageView fx:id="detailActionIcon212" fitHeight="14.06" fitWidth="17.78" pickOnBounds="true" preserveRatio="true">
                                                    <image>
-                                                      <Image url="@B-Court/Ikon%20detail.png" />
+                                                      <Image url="@../assets//Ikon%20detail.png" />
                                                    </image>
                                                 </ImageView>
                                              </graphic>
@@ -478,7 +478,7 @@
                                              <graphic>
                                                 <ImageView fx:id="editActionIcon212" fitHeight="14.06" fitWidth="17.78" pickOnBounds="true" preserveRatio="true">
                                                    <image>
-                                                      <Image url="@B-Court/Ikon%20edit.png" />
+                                                      <Image url="@../assets//Ikon%20edit.png" />
                                                    </image>
                                                 </ImageView>
                                              </graphic>
@@ -487,7 +487,7 @@
                                              <graphic>
                                                 <ImageView fx:id="deleteActionIcon212" fitHeight="14.06" fitWidth="17.78" pickOnBounds="true" preserveRatio="true">
                                                    <image>
-                                                      <Image url="@B-Court/Ikon%20hapus.png" />
+                                                      <Image url="@../assets//Ikon%20hapus.png" />
                                                    </image>
                                                 </ImageView>
                                              </graphic>
@@ -522,7 +522,7 @@
                                              <graphic>
                                                 <ImageView fx:id="detailActionIcon213" fitHeight="14.06" fitWidth="17.78" pickOnBounds="true" preserveRatio="true">
                                                    <image>
-                                                      <Image url="@B-Court/Ikon%20detail.png" />
+                                                      <Image url="@../assets//Ikon%20detail.png" />
                                                    </image>
                                                 </ImageView>
                                              </graphic>
@@ -531,7 +531,7 @@
                                              <graphic>
                                                 <ImageView fx:id="editActionIcon213" fitHeight="14.06" fitWidth="17.78" pickOnBounds="true" preserveRatio="true">
                                                    <image>
-                                                      <Image url="@B-Court/Ikon%20edit.png" />
+                                                      <Image url="@../assets//Ikon%20edit.png" />
                                                    </image>
                                                 </ImageView>
                                              </graphic>
@@ -540,7 +540,7 @@
                                              <graphic>
                                                 <ImageView fx:id="deleteActionIcon213" fitHeight="14.06" fitWidth="17.78" pickOnBounds="true" preserveRatio="true">
                                                    <image>
-                                                      <Image url="@B-Court/Ikon%20hapus.png" />
+                                                      <Image url="@../assets//Ikon%20hapus.png" />
                                                    </image>
                                                 </ImageView>
                                              </graphic>
@@ -575,7 +575,7 @@
                                              <graphic>
                                                 <ImageView fx:id="detailActionIcon214" fitHeight="14.06" fitWidth="17.78" pickOnBounds="true" preserveRatio="true">
                                                    <image>
-                                                      <Image url="@B-Court/Ikon%20detail.png" />
+                                                      <Image url="@../assets//Ikon%20detail.png" />
                                                    </image>
                                                 </ImageView>
                                              </graphic>
@@ -584,7 +584,7 @@
                                              <graphic>
                                                 <ImageView fx:id="editActionIcon214" fitHeight="14.06" fitWidth="17.78" pickOnBounds="true" preserveRatio="true">
                                                    <image>
-                                                      <Image url="@B-Court/Ikon%20edit.png" />
+                                                      <Image url="@../assets//Ikon%20edit.png" />
                                                    </image>
                                                 </ImageView>
                                              </graphic>
@@ -593,7 +593,7 @@
                                              <graphic>
                                                 <ImageView fx:id="deleteActionIcon214" fitHeight="14.06" fitWidth="17.78" pickOnBounds="true" preserveRatio="true">
                                                    <image>
-                                                      <Image url="@B-Court/Ikon%20hapus.png" />
+                                                      <Image url="@../assets//Ikon%20hapus.png" />
                                                    </image>
                                                 </ImageView>
                                              </graphic>
