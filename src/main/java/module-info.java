@@ -3,6 +3,7 @@ module com.bcourt {
     requires javafx.controls;
     requires javafx.fxml;
     requires java.sql;
+    requires com.google.zxing;
 
     // Membuka package utama untuk JavaFX
     opens com.bcourt to javafx.fxml;
@@ -13,3 +14,4 @@ module com.bcourt {
     // Export package utama
     exports com.bcourt;
 }
+
