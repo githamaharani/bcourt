@@ -20,4 +20,5 @@ module com.bcourt {
     exports com.bcourt;
     exports com.bcourt.controller;
     exports com.bcourt.model;
+    exports com.bcourt.dao;
 }

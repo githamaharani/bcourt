@@ -3,6 +3,7 @@ package com.bcourt.controller;
 import java.io.IOException;
 
 import com.bcourt.App;
+import com.bcourt.dao.UserDAO;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
@@ -22,6 +23,8 @@ public class LoginController {
     @FXML private Hyperlink lnkForgotPassword;
     @FXML private Button btnSignIn;
     @FXML private Hyperlink lnkRegister;
+
+    private final UserDAO userDAO = new UserDAO();
 
     @FXML
     public void initialize() {
@@ -61,7 +64,7 @@ public class LoginController {
         }
     }
 
-    // Proses login
+    // Proses login menggunakan database
     @FXML
     private void handleLogin() {
 
@@ -73,33 +76,65 @@ public class LoginController {
 
         if (username.isEmpty()) {
             tampilkanAlert(
-                Alert.AlertType.WARNING,
-                "Username harus diisi."
+                    Alert.AlertType.WARNING,
+                    "Username harus diisi."
             );
             return;
         }
 
         if (password.isEmpty()) {
             tampilkanAlert(
-                Alert.AlertType.WARNING,
-                "Password harus diisi."
+                    Alert.AlertType.WARNING,
+                    "Password harus diisi."
             );
             return;
         }
 
-        /*
-         * TODO:
-         * Hubungkan ke UserDAO setelah struktur
-         * tabel akun dari database teman tersedia.
-         *
-         * Login harus memeriksa username, password,
-         * dan role dari database.
-         */
+        try {
+            String role = userDAO.loginUser(username, password);
 
-        tampilkanAlert(
-            Alert.AlertType.INFORMATION,
-            "Form login sudah siap. Autentikasi database belum dihubungkan."
-        );
+            if (role == null) {
+                tampilkanAlert(
+                        Alert.AlertType.ERROR,
+                        "Username atau password salah, atau koneksi database bermasalah."
+                );
+                return;
+            }
+
+            if (role.equalsIgnoreCase("Admin")) {
+
+                tampilkanAlert(
+                        Alert.AlertType.INFORMATION,
+                        "Login Admin berhasil."
+                );
+
+                App.setRoot("dashboard-admin");
+
+            } else if (role.equalsIgnoreCase("Kasir")) {
+
+                tampilkanAlert(
+                        Alert.AlertType.INFORMATION,
+                        "Login Kasir berhasil."
+                );
+
+                App.setRoot("dashboard-user");
+
+            } else {
+
+                tampilkanAlert(
+                        Alert.AlertType.ERROR,
+                        "Role pengguna tidak dikenali: " + role
+                );
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+
+            tampilkanAlert(
+                    Alert.AlertType.ERROR,
+                    "Dashboard tidak dapat dibuka. Periksa lokasi file FXML."
+            );
+        }
     }
 
     // Buka halaman Register
@@ -108,12 +143,13 @@ public class LoginController {
 
         try {
             App.setRoot("register");
+
         } catch (IOException e) {
             e.printStackTrace();
 
             tampilkanAlert(
-                Alert.AlertType.ERROR,
-                "Halaman Register tidak dapat dibuka. Periksa register.fxml."
+                    Alert.AlertType.ERROR,
+                    "Halaman Register tidak dapat dibuka."
             );
         }
     }
@@ -122,8 +158,8 @@ public class LoginController {
     private void handleForgotPassword() {
 
         tampilkanAlert(
-            Alert.AlertType.INFORMATION,
-            "Silakan hubungi administrator untuk bantuan reset password."
+                Alert.AlertType.INFORMATION,
+                "Silakan hubungi administrator untuk bantuan reset password."
         );
     }
 

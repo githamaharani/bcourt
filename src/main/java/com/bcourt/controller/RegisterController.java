@@ -3,6 +3,7 @@ package com.bcourt.controller;
 import java.io.IOException;
 
 import com.bcourt.App;
+import com.bcourt.dao.UserDAO;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
@@ -22,6 +23,8 @@ public class RegisterController {
 
     @FXML private Button btnRegister;
     @FXML private Hyperlink lnkLogin;
+
+    private final UserDAO userDAO = new UserDAO();
 
     @FXML
     public void initialize() {
@@ -44,8 +47,8 @@ public class RegisterController {
                 || konfirmasi.isEmpty()) {
 
             tampilkanAlert(
-                Alert.AlertType.WARNING,
-                "Semua kolom wajib diisi."
+                    Alert.AlertType.WARNING,
+                    "Semua kolom wajib diisi."
             );
             return;
         }
@@ -53,8 +56,8 @@ public class RegisterController {
         // Validasi username
         if (username.length() < 4) {
             tampilkanAlert(
-                Alert.AlertType.WARNING,
-                "Username minimal 4 karakter."
+                    Alert.AlertType.WARNING,
+                    "Username minimal 4 karakter."
             );
             return;
         }
@@ -62,8 +65,8 @@ public class RegisterController {
         // Validasi nomor HP
         if (!phone.matches("[0-9]{10,15}")) {
             tampilkanAlert(
-                Alert.AlertType.WARNING,
-                "Nomor HP harus terdiri dari 10 sampai 15 angka."
+                    Alert.AlertType.WARNING,
+                    "Nomor HP harus terdiri dari 10 sampai 15 angka."
             );
             return;
         }
@@ -71,8 +74,8 @@ public class RegisterController {
         // Validasi password
         if (password.length() < 8) {
             tampilkanAlert(
-                Alert.AlertType.WARNING,
-                "Password minimal 8 karakter."
+                    Alert.AlertType.WARNING,
+                    "Password minimal 8 karakter."
             );
             return;
         }
@@ -80,24 +83,54 @@ public class RegisterController {
         // Validasi konfirmasi password
         if (!password.equals(konfirmasi)) {
             tampilkanAlert(
-                Alert.AlertType.WARNING,
-                "Konfirmasi password tidak cocok."
+                    Alert.AlertType.WARNING,
+                    "Konfirmasi password tidak cocok."
             );
             return;
         }
 
-        /*
-         * TODO:
-         * Hubungkan dengan UserDAO setelah struktur
-         * tabel akun database B-Court diketahui.
-         *
-         * Role akun baru harus otomatis KASIR.
-         */
+        // Periksa username yang sudah terdaftar
+        if (userDAO.isUsernameExists(username)) {
+            tampilkanAlert(
+                    Alert.AlertType.WARNING,
+                    "Username sudah digunakan. Silakan gunakan username lain."
+            );
+            return;
+        }
 
-        tampilkanAlert(
-            Alert.AlertType.INFORMATION,
-            "Validasi berhasil. Penyimpanan akun ke database belum dihubungkan."
+        // Simpan akun baru dengan role otomatis Kasir
+        boolean berhasil = userDAO.registerUser(
+                nama,
+                username,
+                password
         );
+
+        if (berhasil) {
+
+            tampilkanAlert(
+                    Alert.AlertType.INFORMATION,
+                    "Registrasi berhasil! Akun Kasir sudah tersimpan di database."
+            );
+
+            try {
+                App.setRoot("login");
+
+            } catch (IOException e) {
+                e.printStackTrace();
+
+                tampilkanAlert(
+                        Alert.AlertType.ERROR,
+                        "Registrasi berhasil, tetapi halaman Login tidak dapat dibuka."
+                );
+            }
+
+        } else {
+
+            tampilkanAlert(
+                    Alert.AlertType.ERROR,
+                    "Registrasi gagal. Periksa koneksi database atau username kamu."
+            );
+        }
     }
 
     // Kembali ke halaman Login
@@ -111,8 +144,8 @@ public class RegisterController {
             e.printStackTrace();
 
             tampilkanAlert(
-                Alert.AlertType.ERROR,
-                "Halaman Login tidak dapat dibuka."
+                    Alert.AlertType.ERROR,
+                    "Halaman Login tidak dapat dibuka."
             );
         }
     }
